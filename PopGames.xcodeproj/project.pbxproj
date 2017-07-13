@@ -12,6 +12,9 @@
 		341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341A124B1F1718F900795FC8 /* PopGames.xcdatamodeld */; };
 		341A124F1F1718F900795FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341A124E1F1718F900795FC8 /* Assets.xcassets */; };
 		341A12521F1718F900795FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341A12501F1718F900795FC8 /* LaunchScreen.storyboard */; };
+		341A12811F171E3C00795FC8 /* ListGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341A12801F171E3C00795FC8 /* ListGamesViewController.swift */; };
+		342A54DC1F172F9400479D49 /* GamesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A54DB1F172F9400479D49 /* GamesCollectionViewDelegate.swift */; };
+		342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		341A125E1F1718F900795FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		341A12631F1718F900795FC8 /* PopGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		341A12691F1718F900795FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341A12801F171E3C00795FC8 /* ListGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesViewController.swift; sourceTree = "<group>"; };
+		342A54DB1F172F9400479D49 /* GamesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,7 @@
 		341A12431F1718F900795FC8 /* PopGames */ = {
 			isa = PBXGroup;
 			children = (
+				341A127E1F171E1F00795FC8 /* Games */,
 				341A12751F17196700795FC8 /* Essentials */,
 				341A12481F1718F900795FC8 /* Main.storyboard */,
 			);
@@ -125,6 +132,40 @@
 				341A124B1F1718F900795FC8 /* PopGames.xcdatamodeld */,
 			);
 			path = Essentials;
+			sourceTree = "<group>";
+		};
+		341A127E1F171E1F00795FC8 /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				342A54DD1F172FB100479D49 /* DataSources */,
+				342A54DA1F172F8600479D49 /* Delegates */,
+				341A127F1F171E2700795FC8 /* Controllers */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		341A127F1F171E2700795FC8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				341A12801F171E3C00795FC8 /* ListGamesViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		342A54DA1F172F8600479D49 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				342A54DB1F172F9400479D49 /* GamesCollectionViewDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		342A54DD1F172FB100479D49 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,6 +318,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				341A12451F1718F900795FC8 /* AppDelegate.swift in Sources */,
+				342A54DC1F172F9400479D49 /* GamesCollectionViewDelegate.swift in Sources */,
+				342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */,
+				341A12811F171E3C00795FC8 /* ListGamesViewController.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
