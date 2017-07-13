@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		341A12451F1718F900795FC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341A12441F1718F900795FC8 /* AppDelegate.swift */; };
+		341A124A1F1718F900795FC8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341A12481F1718F900795FC8 /* Main.storyboard */; };
+		341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 341A124B1F1718F900795FC8 /* PopGames.xcdatamodeld */; };
+		341A124F1F1718F900795FC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 341A124E1F1718F900795FC8 /* Assets.xcassets */; };
+		341A12521F1718F900795FC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 341A12501F1718F900795FC8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		341A12591F1718F900795FC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 341A12391F1718F900795FC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 341A12401F1718F900795FC8;
+			remoteInfo = PopGames;
+		};
+		341A12641F1718F900795FC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 341A12391F1718F900795FC8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 341A12401F1718F900795FC8;
+			remoteInfo = PopGames;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		341A12411F1718F900795FC8 /* PopGames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopGames.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		341A12441F1718F900795FC8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		341A12491F1718F900795FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		341A124C1F1718F900795FC8 /* PopGames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PopGames.xcdatamodel; sourceTree = "<group>"; };
+		341A124E1F1718F900795FC8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		341A12511F1718F900795FC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		341A12531F1718F900795FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341A12581F1718F900795FC8 /* PopGamesUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopGamesUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		341A125E1F1718F900795FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		341A12631F1718F900795FC8 /* PopGamesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopGamesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		341A12691F1718F900795FC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		341A123E1F1718F900795FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A12551F1718F900795FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A12601F1718F900795FC8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		341A12381F1718F900795FC8 = {
+			isa = PBXGroup;
+			children = (
+				341A12431F1718F900795FC8 /* PopGames */,
+				341A125B1F1718F900795FC8 /* PopGamesUnitTests */,
+				341A12661F1718F900795FC8 /* PopGamesUITests */,
+				341A12421F1718F900795FC8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		341A12421F1718F900795FC8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				341A12411F1718F900795FC8 /* PopGames.app */,
+				341A12581F1718F900795FC8 /* PopGamesUnitTests.xctest */,
+				341A12631F1718F900795FC8 /* PopGamesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		341A12431F1718F900795FC8 /* PopGames */ = {
+			isa = PBXGroup;
+			children = (
+				341A12751F17196700795FC8 /* Essentials */,
+				341A12481F1718F900795FC8 /* Main.storyboard */,
+			);
+			path = PopGames;
+			sourceTree = "<group>";
+		};
+		341A125B1F1718F900795FC8 /* PopGamesUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				341A125E1F1718F900795FC8 /* Info.plist */,
+			);
+			path = PopGamesUnitTests;
+			sourceTree = "<group>";
+		};
+		341A12661F1718F900795FC8 /* PopGamesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				341A12691F1718F900795FC8 /* Info.plist */,
+			);
+			path = PopGamesUITests;
+			sourceTree = "<group>";
+		};
+		341A12751F17196700795FC8 /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				341A12441F1718F900795FC8 /* AppDelegate.swift */,
+				341A124E1F1718F900795FC8 /* Assets.xcassets */,
+				341A12531F1718F900795FC8 /* Info.plist */,
+				341A12501F1718F900795FC8 /* LaunchScreen.storyboard */,
+				341A124B1F1718F900795FC8 /* PopGames.xcdatamodeld */,
+			);
+			path = Essentials;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		341A12401F1718F900795FC8 /* PopGames */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 341A126C1F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGames" */;
+			buildPhases = (
+				341A123D1F1718F900795FC8 /* Sources */,
+				341A123E1F1718F900795FC8 /* Frameworks */,
+				341A123F1F1718F900795FC8 /* Resources */,
+				341A127B1F171CED00795FC8 /* Swift Lint */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopGames;
+			productName = PopGames;
+			productReference = 341A12411F1718F900795FC8 /* PopGames.app */;
+			productType = "com.apple.product-type.application";
+		};
+		341A12571F1718F900795FC8 /* PopGamesUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 341A126F1F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGamesUnitTests" */;
+			buildPhases = (
+				341A12541F1718F900795FC8 /* Sources */,
+				341A12551F1718F900795FC8 /* Frameworks */,
+				341A12561F1718F900795FC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				341A125A1F1718F900795FC8 /* PBXTargetDependency */,
+			);
+			name = PopGamesUnitTests;
+			productName = PopGamesTests;
+			productReference = 341A12581F1718F900795FC8 /* PopGamesUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		341A12621F1718F900795FC8 /* PopGamesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 341A12721F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGamesUITests" */;
+			buildPhases = (
+				341A125F1F1718F900795FC8 /* Sources */,
+				341A12601F1718F900795FC8 /* Frameworks */,
+				341A12611F1718F900795FC8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				341A12651F1718F900795FC8 /* PBXTargetDependency */,
+			);
+			name = PopGamesUITests;
+			productName = PopGamesUITests;
+			productReference = 341A12631F1718F900795FC8 /* PopGamesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		341A12391F1718F900795FC8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Ronan R. Nunes";
+				TargetAttributes = {
+					341A12401F1718F900795FC8 = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					341A12571F1718F900795FC8 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 341A12401F1718F900795FC8;
+					};
+					341A12621F1718F900795FC8 = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = 341A12401F1718F900795FC8;
+					};
+				};
+			};
+			buildConfigurationList = 341A123C1F1718F900795FC8 /* Build configuration list for PBXProject "PopGames" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 341A12381F1718F900795FC8;
+			productRefGroup = 341A12421F1718F900795FC8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				341A12401F1718F900795FC8 /* PopGames */,
+				341A12571F1718F900795FC8 /* PopGamesUnitTests */,
+				341A12621F1718F900795FC8 /* PopGamesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		341A123F1F1718F900795FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				341A12521F1718F900795FC8 /* LaunchScreen.storyboard in Resources */,
+				341A124F1F1718F900795FC8 /* Assets.xcassets in Resources */,
+				341A124A1F1718F900795FC8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A12561F1718F900795FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A12611F1718F900795FC8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		341A127B1F171CED00795FC8 /* Swift Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Swift Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"Install SwiftLint: https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		341A123D1F1718F900795FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				341A12451F1718F900795FC8 /* AppDelegate.swift in Sources */,
+				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A12541F1718F900795FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		341A125F1F1718F900795FC8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		341A125A1F1718F900795FC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 341A12401F1718F900795FC8 /* PopGames */;
+			targetProxy = 341A12591F1718F900795FC8 /* PBXContainerItemProxy */;
+		};
+		341A12651F1718F900795FC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 341A12401F1718F900795FC8 /* PopGames */;
+			targetProxy = 341A12641F1718F900795FC8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		341A12481F1718F900795FC8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				341A12491F1718F900795FC8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		341A12501F1718F900795FC8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				341A12511F1718F900795FC8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		341A126A1F1718F900795FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		341A126B1F1718F900795FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		341A126D1F1718F900795FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = "$(SRCROOT)/PopGames/Essentials/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		341A126E1F1718F900795FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = "$(SRCROOT)/PopGames/Essentials/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGames;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		341A12701F1718F900795FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = PopGamesUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopGames.app/PopGames";
+			};
+			name = Debug;
+		};
+		341A12711F1718F900795FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = PopGamesUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopGames.app/PopGames";
+			};
+			name = Release;
+		};
+		341A12731F1718F900795FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = PopGamesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopGames;
+			};
+			name = Debug;
+		};
+		341A12741F1718F900795FC8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 2729VXDM4D;
+				INFOPLIST_FILE = PopGamesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopGames;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		341A123C1F1718F900795FC8 /* Build configuration list for PBXProject "PopGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341A126A1F1718F900795FC8 /* Debug */,
+				341A126B1F1718F900795FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		341A126C1F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGames" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341A126D1F1718F900795FC8 /* Debug */,
+				341A126E1F1718F900795FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		341A126F1F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGamesUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341A12701F1718F900795FC8 /* Debug */,
+				341A12711F1718F900795FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		341A12721F1718F900795FC8 /* Build configuration list for PBXNativeTarget "PopGamesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				341A12731F1718F900795FC8 /* Debug */,
+				341A12741F1718F900795FC8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		341A124B1F1718F900795FC8 /* PopGames.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				341A124C1F1718F900795FC8 /* PopGames.xcdatamodel */,
+			);
+			currentVersion = 341A124C1F1718F900795FC8 /* PopGames.xcdatamodel */;
+			path = PopGames.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 341A12391F1718F900795FC8 /* Project object */;
+}
