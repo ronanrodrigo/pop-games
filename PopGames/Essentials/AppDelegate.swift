@@ -1,16 +1,10 @@
-//
-//  AppDelegate.swift
-//  PopGames
-//
-//  Created by Ronan R. Nunes on 12/07/17.
-//  Copyright © 2017 Ronan R. Nunes. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?
 
     // MARK: - Core Data stack
 
