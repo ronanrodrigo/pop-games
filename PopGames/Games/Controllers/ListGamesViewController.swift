@@ -1,11 +1,12 @@
 import UIKit
 
-private typealias GamesDataProvider = (dataSource: GamesCollectionViewDataSource, delegate: GamesCollectionViewDelegate)
-
 class ListGamesViewController: UIViewController {
 
     @IBOutlet private weak var gamesCollectionView: UICollectionView!
-    private let gamesDataProvider: GamesDataProvider = (GamesCollectionViewDataSource(), GamesCollectionViewDelegate())
+
+    // swiftlint:disable weak_delegate
+    private let collectionViewDelegate = GamesCollectionViewDelegate()
+    private let collectionViewDataSource = GamesCollectionViewDataSource()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -13,8 +14,8 @@ class ListGamesViewController: UIViewController {
     }
 
     private func setupDataProviders() {
-        gamesCollectionView.dataSource = gamesDataProvider.dataSource
-        gamesCollectionView.delegate = gamesDataProvider.delegate
+        gamesCollectionView.dataSource = collectionViewDataSource
+        gamesCollectionView.delegate = collectionViewDelegate
     }
 
 }
