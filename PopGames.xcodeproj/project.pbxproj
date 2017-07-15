@@ -15,6 +15,7 @@
 		341A12811F171E3C00795FC8 /* ListGamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341A12801F171E3C00795FC8 /* ListGamesViewController.swift */; };
 		342A54DC1F172F9400479D49 /* GamesCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A54DB1F172F9400479D49 /* GamesCollectionViewDelegate.swift */; };
 		342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */; };
+		343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045A41F1A87C300BE6BBF /* Identifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		341A12801F171E3C00795FC8 /* ListGamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGamesViewController.swift; sourceTree = "<group>"; };
 		342A54DB1F172F9400479D49 /* GamesCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDelegate.swift; sourceTree = "<group>"; };
 		342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		343045A41F1A87C300BE6BBF /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		341A12431F1718F900795FC8 /* PopGames */ = {
 			isa = PBXGroup;
 			children = (
+				343045A31F1A87B000BE6BBF /* Constants */,
 				341A127E1F171E1F00795FC8 /* Games */,
 				341A12751F17196700795FC8 /* Essentials */,
 				341A12481F1718F900795FC8 /* Main.storyboard */,
@@ -166,6 +169,14 @@
 				342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		343045A31F1A87B000BE6BBF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				343045A41F1A87C300BE6BBF /* Identifier.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +332,7 @@
 				342A54DC1F172F9400479D49 /* GamesCollectionViewDelegate.swift in Sources */,
 				342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */,
 				341A12811F171E3C00795FC8 /* ListGamesViewController.swift in Sources */,
+				343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
