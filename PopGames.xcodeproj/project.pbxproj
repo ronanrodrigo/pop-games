@@ -112,7 +112,7 @@
 		341A125B1F1718F900795FC8 /* PopGamesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				341A125E1F1718F900795FC8 /* Info.plist */,
+				343045A91F1A94EB00BE6BBF /* Essentials */,
 			);
 			path = PopGamesUnitTests;
 			sourceTree = "<group>";
@@ -120,7 +120,7 @@
 		341A12661F1718F900795FC8 /* PopGamesUITests */ = {
 			isa = PBXGroup;
 			children = (
-				341A12691F1718F900795FC8 /* Info.plist */,
+				343045AA1F1A94F300BE6BBF /* Essentials */,
 			);
 			path = PopGamesUITests;
 			sourceTree = "<group>";
@@ -177,6 +177,22 @@
 				343045A41F1A87C300BE6BBF /* Identifier.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		343045A91F1A94EB00BE6BBF /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				341A125E1F1718F900795FC8 /* Info.plist */,
+			);
+			path = Essentials;
+			sourceTree = "<group>";
+		};
+		343045AA1F1A94F300BE6BBF /* Essentials */ = {
+			isa = PBXGroup;
+			children = (
+				341A12691F1718F900795FC8 /* Info.plist */,
+			);
+			path = Essentials;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -523,7 +539,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = PopGamesUnitTests/Info.plist;
+				INFOPLIST_FILE = PopGamesUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -539,7 +555,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = PopGamesUnitTests/Info.plist;
+				INFOPLIST_FILE = PopGamesUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -554,7 +570,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = PopGamesUITests/Info.plist;
+				INFOPLIST_FILE = PopGamesUITests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -569,7 +585,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
-				INFOPLIST_FILE = PopGamesUITests/Info.plist;
+				INFOPLIST_FILE = PopGamesUITests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
