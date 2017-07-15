@@ -9,4 +9,5 @@ class GamesCollectionViewDelegate: NSObject, UICollectionViewDelegateFlowLayout 
 
         return CGSize(width: collectionCellSize/2, height: collectionCellSize/2)
     }
+
 }
