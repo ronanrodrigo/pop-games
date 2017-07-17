@@ -1,11 +1,11 @@
 protocol Game {
     var name: String { get }
-    var viewers: Int { get }
     var popularity: Int { get }
+    var viewers: Int { get }
 }
 
-struct GameEntity: Game, Decodable {
+struct GameEntity: Game {
     let name: String
-    let viewers: Int
     let popularity: Int
+    let viewers: Int
 }
