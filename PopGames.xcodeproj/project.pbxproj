@@ -17,6 +17,13 @@
 		342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */; };
 		343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045A41F1A87C300BE6BBF /* Identifier.swift */; };
 		343045A81F1A92C400BE6BBF /* GameEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045A71F1A92C400BE6BBF /* GameEntity.swift */; };
+		343045AF1F1A95F000BE6BBF /* TwitchDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045AE1F1A95F000BE6BBF /* TwitchDecodableTests.swift */; };
+		343045B11F1A968600BE6BBF /* ListTopGamesSuccess.json in Resources */ = {isa = PBXBuildFile; fileRef = 343045B01F1A968600BE6BBF /* ListTopGamesSuccess.json */; };
+		343045B41F1AA29700BE6BBF /* TwitchDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045B31F1AA29700BE6BBF /* TwitchDecodable.swift */; };
+		343045B61F1AA2A800BE6BBF /* TopGameDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045B51F1AA2A800BE6BBF /* TopGameDecodable.swift */; };
+		343045B81F1AA2BB00BE6BBF /* GameDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045B71F1AA2BB00BE6BBF /* GameDecodable.swift */; };
+		343045BE1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */; };
+		343045C01F1AA55700BE6BBF /* JSONDecoder+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,13 @@
 		342A54DE1F172FBD00479D49 /* GamesCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		343045A41F1A87C300BE6BBF /* Identifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Identifier.swift; sourceTree = "<group>"; };
 		343045A71F1A92C400BE6BBF /* GameEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEntity.swift; sourceTree = "<group>"; };
+		343045AE1F1A95F000BE6BBF /* TwitchDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDecodableTests.swift; sourceTree = "<group>"; };
+		343045B01F1A968600BE6BBF /* ListTopGamesSuccess.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ListTopGamesSuccess.json; sourceTree = "<group>"; };
+		343045B31F1AA29700BE6BBF /* TwitchDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwitchDecodable.swift; sourceTree = "<group>"; };
+		343045B51F1AA2A800BE6BBF /* TopGameDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopGameDecodable.swift; sourceTree = "<group>"; };
+		343045B71F1AA2BB00BE6BBF /* GameDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDecodable.swift; sourceTree = "<group>"; };
+		343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
+		343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Decode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +128,8 @@
 		341A125B1F1718F900795FC8 /* PopGamesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				343045BC1F1AA48F00BE6BBF /* Extensions */,
+				343045AB1F1A95CB00BE6BBF /* Games */,
 				343045A91F1A94EB00BE6BBF /* Essentials */,
 			);
 			path = PopGamesUnitTests;
@@ -186,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
+				343045B91F1AA2C800BE6BBF /* Decodables */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -204,6 +221,58 @@
 				341A12691F1718F900795FC8 /* Info.plist */,
 			);
 			path = Essentials;
+			sourceTree = "<group>";
+		};
+		343045AB1F1A95CB00BE6BBF /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				343045AD1F1A95DD00BE6BBF /* Mocks */,
+				343045AC1F1A95D300BE6BBF /* Entities */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		343045AC1F1A95D300BE6BBF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				343045BB1F1AA40400BE6BBF /* Decodables */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		343045AD1F1A95DD00BE6BBF /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				343045B01F1A968600BE6BBF /* ListTopGamesSuccess.json */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		343045B91F1AA2C800BE6BBF /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+				343045B31F1AA29700BE6BBF /* TwitchDecodable.swift */,
+				343045B51F1AA2A800BE6BBF /* TopGameDecodable.swift */,
+				343045B71F1AA2BB00BE6BBF /* GameDecodable.swift */,
+			);
+			path = Decodables;
+			sourceTree = "<group>";
+		};
+		343045BB1F1AA40400BE6BBF /* Decodables */ = {
+			isa = PBXGroup;
+			children = (
+				343045AE1F1A95F000BE6BBF /* TwitchDecodableTests.swift */,
+			);
+			path = Decodables;
+			sourceTree = "<group>";
+		};
+		343045BC1F1AA48F00BE6BBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */,
+				343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +347,7 @@
 					};
 					341A12571F1718F900795FC8 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 						TestTargetID = 341A12401F1718F900795FC8;
 					};
 					341A12621F1718F900795FC8 = {
@@ -321,6 +391,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343045B11F1A968600BE6BBF /* ListTopGamesSuccess.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,9 +429,12 @@
 				343045A81F1A92C400BE6BBF /* GameEntity.swift in Sources */,
 				341A12451F1718F900795FC8 /* AppDelegate.swift in Sources */,
 				342A54DC1F172F9400479D49 /* GamesCollectionViewDelegate.swift in Sources */,
+				343045B81F1AA2BB00BE6BBF /* GameDecodable.swift in Sources */,
 				342A54DF1F172FBD00479D49 /* GamesCollectionViewDataSource.swift in Sources */,
+				343045B61F1AA2A800BE6BBF /* TopGameDecodable.swift in Sources */,
 				341A12811F171E3C00795FC8 /* ListGamesViewController.swift in Sources */,
 				343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */,
+				343045B41F1AA29700BE6BBF /* TwitchDecodable.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +443,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				343045BE1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift in Sources */,
+				343045C01F1AA55700BE6BBF /* JSONDecoder+Decode.swift in Sources */,
+				343045AF1F1A95F000BE6BBF /* TwitchDecodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -550,11 +627,13 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
 				INFOPLIST_FILE = PopGamesUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronanrodrigo.PopGamesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopGames.app/PopGames";
@@ -566,6 +645,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 2729VXDM4D;
 				INFOPLIST_FILE = PopGamesUnitTests/Essentials/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
