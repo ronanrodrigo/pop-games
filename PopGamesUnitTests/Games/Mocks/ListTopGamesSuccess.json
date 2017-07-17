@@ -1,0 +1,245 @@
+{
+  "_total": 1659,
+  "top": [
+    {
+      "game": {
+        "name": "League of Legends",
+        "popularity": 176450,
+        "_id": 21779,
+        "giantbomb_id": 24024,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/League%20of%20Legends-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/League%20of%20Legends-{width}x{height}.jpg"
+        },
+        "localized_name": "League of Legends",
+        "locale": ""
+      },
+      "viewers": 179784,
+      "channels": 1951
+    },
+    {
+      "game": {
+        "name": "Counter-Strike: Global Offensive",
+        "popularity": 96112,
+        "_id": 32399,
+        "giantbomb_id": 36113,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Counter-Strike:%20Global%20Offensive-{width}x{height}.jpg"
+        },
+        "localized_name": "Counter-Strike: Global Offensive",
+        "locale": ""
+      },
+      "viewers": 96559,
+      "channels": 1109
+    },
+    {
+      "game": {
+        "name": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+        "popularity": 89363,
+        "_id": 493057,
+        "giantbomb_id": 54979,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/PLAYERUNKNOWN%27S%20BATTLEGROUNDS-{width}x{height}.jpg"
+        },
+        "localized_name": "PLAYERUNKNOWN'S BATTLEGROUNDS",
+        "locale": ""
+      },
+      "viewers": 94203,
+      "channels": 2783
+    },
+    {
+      "game": {
+        "name": "Street Fighter V",
+        "popularity": 50430,
+        "_id": 488615,
+        "giantbomb_id": 48320,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Street%20Fighter%20V-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Street%20Fighter%20V-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Street%20Fighter%20V-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Street%20Fighter%20V-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Street%20Fighter%20V-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Street%20Fighter%20V-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Street%20Fighter%20V-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Street%20Fighter%20V-{width}x{height}.jpg"
+        },
+        "localized_name": "Street Fighter V",
+        "locale": ""
+      },
+      "viewers": 50965,
+      "channels": 40
+    },
+    {
+      "game": {
+        "name": "Dota 2",
+        "popularity": 50215,
+        "_id": 29595,
+        "giantbomb_id": 32887,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Dota%202-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Dota%202-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Dota%202-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Dota%202-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Dota%202-{width}x{height}.jpg"
+        },
+        "localized_name": "Dota 2",
+        "locale": ""
+      },
+      "viewers": 45227,
+      "channels": 786
+    },
+    {
+      "game": {
+        "name": "Grand Theft Auto V",
+        "popularity": 36364,
+        "_id": 32982,
+        "giantbomb_id": 36765,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Grand%20Theft%20Auto%20V-{width}x{height}.jpg"
+        },
+        "localized_name": "Grand Theft Auto V",
+        "locale": ""
+      },
+      "viewers": 36852,
+      "channels": 688
+    },
+    {
+      "game": {
+        "name": "Paladins",
+        "popularity": 31239,
+        "_id": 491115,
+        "giantbomb_id": 51613,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Paladins-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Paladins-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Paladins-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Paladins-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Paladins-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Paladins-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Paladins-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Paladins-{width}x{height}.jpg"
+        },
+        "localized_name": "Paladins",
+        "locale": ""
+      },
+      "viewers": 31440,
+      "channels": 173
+    },
+    {
+      "game": {
+        "name": "Hearthstone",
+        "popularity": 30813,
+        "_id": 138585,
+        "giantbomb_id": 42033,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Hearthstone-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Hearthstone-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Hearthstone-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Hearthstone-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Hearthstone-{width}x{height}.jpg"
+        },
+        "localized_name": "Hearthstone",
+        "locale": ""
+      },
+      "viewers": 31318,
+      "channels": 276
+    },
+    {
+      "game": {
+        "name": "Overwatch",
+        "popularity": 31992,
+        "_id": 488552,
+        "giantbomb_id": 48190,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/Overwatch-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/Overwatch-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/Overwatch-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/Overwatch-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/Overwatch-{width}x{height}.jpg"
+        },
+        "localized_name": "Overwatch",
+        "locale": ""
+      },
+      "viewers": 31170,
+      "channels": 1381
+    },
+    {
+      "game": {
+        "name": "StarCraft II",
+        "popularity": 29819,
+        "_id": 490422,
+        "giantbomb_id": 0,
+        "box": {
+          "large": "https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-272x380.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-136x190.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-52x72.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-boxart/StarCraft%20II-{width}x{height}.jpg"
+        },
+        "logo": {
+          "large": "https://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II-240x144.jpg",
+          "medium": "https://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II-120x72.jpg",
+          "small": "https://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II-60x36.jpg",
+          "template": "https://static-cdn.jtvnw.net/ttv-logoart/StarCraft%20II-{width}x{height}.jpg"
+        },
+        "localized_name": "StarCraft II",
+        "locale": ""
+      },
+      "viewers": 30307,
+      "channels": 93
+    }
+  ]
+}
