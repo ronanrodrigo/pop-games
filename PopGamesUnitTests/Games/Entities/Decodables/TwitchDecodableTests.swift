@@ -11,7 +11,7 @@ class TwitchDecodableTests: XCTestCase {
     }
 
     func testDecodeTwitchEntityFromJsonWhenJsonAreEqualASuccessResponse() {
-        let twitch: TwitchDecodable = JSONDecoder().decode(data: topGameData)
+        let twitch: TwitchTopGamesDecodable = JSONDecoder().decode(data: topGameData)
 
         XCTAssertNotNil(twitch)
         XCTAssertEqual(twitch.top.count, 10)
