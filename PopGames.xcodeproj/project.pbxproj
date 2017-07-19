@@ -171,13 +171,13 @@
 		341A127E1F171E1F00795FC8 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				3493C05E1F2023130099C58F /* Presenters */,
-				3493C05B1F2022F80099C58F /* Gateways */,
-				3493C0581F2022DD0099C58F /* Usecases */,
-				343045A61F1A92AC00BE6BBF /* Entities */,
+				341A127F1F171E2700795FC8 /* Controllers */,
 				342A54DD1F172FB100479D49 /* DataSources */,
 				342A54DA1F172F8600479D49 /* Delegates */,
-				341A127F1F171E2700795FC8 /* Controllers */,
+				343045A61F1A92AC00BE6BBF /* Entities */,
+				3493C05B1F2022F80099C58F /* Gateways */,
+				3493C05E1F2023130099C58F /* Presenters */,
+				3493C0581F2022DD0099C58F /* Usecases */,
 			);
 			path = Games;
 			sourceTree = "<group>";
