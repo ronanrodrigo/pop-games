@@ -141,9 +141,9 @@
 		341A125B1F1718F900795FC8 /* PopGamesUnitTests */ = {
 			isa = PBXGroup;
 			children = (
+				343045A91F1A94EB00BE6BBF /* Essentials */,
 				343045BC1F1AA48F00BE6BBF /* Extensions */,
 				343045AB1F1A95CB00BE6BBF /* Games */,
-				343045A91F1A94EB00BE6BBF /* Essentials */,
 			);
 			path = PopGamesUnitTests;
 			sourceTree = "<group>";
@@ -242,8 +242,8 @@
 		343045AB1F1A95CB00BE6BBF /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				343045AC1F1A95D300BE6BBF /* Entities */,
 				343045AD1F1A95DD00BE6BBF /* Doubles */,
+				343045AC1F1A95D300BE6BBF /* Entities */,
 				34C5C68D1F1F021D00B89151 /* Usecases */,
 			);
 			path = Games;
@@ -278,8 +278,8 @@
 		343045BC1F1AA48F00BE6BBF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */,
 				343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */,
+				343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -303,8 +303,8 @@
 		3493C0551F2021A40099C58F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3493C0531F201D3B0099C58F /* Result.swift */,
 				3493C0561F2021B70099C58F /* PopGamesError.swift */,
+				3493C0531F201D3B0099C58F /* Result.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
