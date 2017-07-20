@@ -1,2 +1,6 @@
 nesting:
   type_level: 2
+
+variable_name:
+  excluded:
+    - id
