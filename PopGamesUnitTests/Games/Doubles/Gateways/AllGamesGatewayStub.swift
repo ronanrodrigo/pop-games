@@ -6,9 +6,10 @@ class AllGamesGatewayStub: AllGamesGateway {
     var allGamesStub = false
     var allGamesOnCompleteStub: Result<[Game]>!
 
-    func allGames(onComplete: ((Result<[Game]>) -> Void)) {
+    func allGames() -> Future<[Game]> {
         allGamesStub = true
-        onComplete(allGamesOnCompleteStub)
+        return Future { completion in
+            completion(allGamesOnCompleteStub)
+        }
     }
-
 }

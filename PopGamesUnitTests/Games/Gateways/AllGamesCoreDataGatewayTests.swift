@@ -20,7 +20,7 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
     func testAllGamesWhenHasGamesThenReturnGamesArray() {
         var games: [Game] = []
 
-        gateway.allGames { if case Result<[Game]>.success(let requestedGames) = $0 {
+        gateway.allGames().onResult { if case Result<[Game]>.success(let requestedGames) = $0 {
             games = requestedGames
         }}
 
