@@ -127,11 +127,8 @@
 		341A12431F1718F900795FC8 /* PopGames */ = {
 			isa = PBXGroup;
 			children = (
-				3493C07B1F2031080099C58F /* Extensions */,
-				343045A31F1A87B000BE6BBF /* Constants */,
 				341A12751F17196700795FC8 /* Essentials */,
 				341A127E1F171E1F00795FC8 /* Games */,
-				3493C0551F2021A40099C58F /* Helpers */,
 				341A12481F1718F900795FC8 /* Main.storyboard */,
 			);
 			path = PopGames;
@@ -141,7 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				343045A91F1A94EB00BE6BBF /* Essentials */,
-				343045BC1F1AA48F00BE6BBF /* Extensions */,
 				343045AB1F1A95CB00BE6BBF /* Games */,
 			);
 			path = PopGamesUnitTests;
@@ -150,6 +146,9 @@
 		341A12751F17196700795FC8 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				3493C07B1F2031080099C58F /* Extensions */,
+				343045A31F1A87B000BE6BBF /* Constants */,
+				3493C0551F2021A40099C58F /* Helpers */,
 				341A12441F1718F900795FC8 /* AppDelegate.swift */,
 				341A124E1F1718F900795FC8 /* Assets.xcassets */,
 				341A12531F1718F900795FC8 /* Info.plist */,
@@ -219,6 +218,7 @@
 		343045A91F1A94EB00BE6BBF /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
+				343045BC1F1AA48F00BE6BBF /* Extensions */,
 				341A125E1F1718F900795FC8 /* Info.plist */,
 			);
 			path = Essentials;
