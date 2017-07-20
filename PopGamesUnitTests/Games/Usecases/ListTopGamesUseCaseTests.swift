@@ -11,7 +11,7 @@ class ListTopGamesUseCaseTests: XCTestCase {
         super.setUp()
         gateway = AllGamesGatewayStub()
         presenter = ListTopGamesPresenterStub()
-        usecase = ListTopGamesUseCase(presenter: presenter, allGamesGateway: gateway)
+        usecase = ListTopGamesUseCase(listTopGamesPresenter: presenter, allGamesGateway: gateway)
     }
 
     func testListTopGamesWhenCompleteRequestWithSuccessThenListGames() {

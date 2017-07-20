@@ -1,18 +1,18 @@
 struct ListTopGamesUseCase {
 
-    private let presenter: ListTopGamesPresenter
-    private let gateway: AllGamesGateway
+    private let listTopGamesPresenter: ListTopGamesPresenter
+    private let allGamesGateway: AllGamesGateway
 
-    init(presenter: ListTopGamesPresenter, allGamesGateway: AllGamesGateway) {
-        self.presenter = presenter
-        self.gateway = allGamesGateway
+    init(listTopGamesPresenter: ListTopGamesPresenter, allGamesGateway: AllGamesGateway) {
+        self.listTopGamesPresenter = listTopGamesPresenter
+        self.allGamesGateway = allGamesGateway
     }
 
     func list() {
-        gateway.allGames().onResult { result in
+        allGamesGateway.allGames().onResult { result in
             switch result {
-            case .success(let games): self.presenter.list(games: games)
-            case .fail(let error): self.presenter.show(error: error)
+            case .success(let games): self.listTopGamesPresenter.list(games: games)
+            case .fail(let error): self.listTopGamesPresenter.show(error: error)
             }
         }
     }
