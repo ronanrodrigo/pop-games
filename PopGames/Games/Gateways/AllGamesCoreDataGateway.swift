@@ -2,17 +2,17 @@ import CoreData
 
 struct AllGamesCoreDataGateway: AllGamesGateway {
 
-    private let persistentContainer: NSPersistentContainer
+    private let managedObjectContext: NSManagedObjectContext
 
-    init(persistentContainer: NSPersistentContainer) {
-        self.persistentContainer = persistentContainer
+    init(managedObjectContext: NSManagedObjectContext) {
+        self.managedObjectContext = managedObjectContext
     }
 
     func allGames(onComplete: ((Result<[Game]>) -> Void)) {
         let fetchGames: NSFetchRequest<GameEntityCoreData> = GameEntityCoreData.fetchRequest()
 
         do {
-            let games = try persistentContainer.viewContext.fetch(fetchGames)
+            let games = try managedObjectContext.fetch(fetchGames)
             let gamesEntities = games.map(generateEntity)
             onComplete(Result.success(gamesEntities))
         } catch {
