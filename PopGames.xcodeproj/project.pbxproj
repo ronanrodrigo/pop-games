@@ -31,6 +31,8 @@
 		3493C0601F20231E0099C58F /* ListTopGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C05F1F20231E0099C58F /* ListTopGamesPresenter.swift */; };
 		3493C0621F20275D0099C58F /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0611F20275D0099C58F /* CoreDataStack.swift */; };
 		3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */; };
+		3493C0771F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */; };
+		3493C0781F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */; };
 		34C5C68F1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5C68E1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		3493C05F1F20231E0099C58F /* ListTopGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopGamesPresenter.swift; sourceTree = "<group>"; };
 		3493C0611F20275D0099C58F /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesCoreDataGateway.swift; sourceTree = "<group>"; };
+		3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntityCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntityCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		34C5C68E1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopGamesUseCaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +225,8 @@
 		343045A61F1A92AC00BE6BBF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */,
+				3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */,
 				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
 				343045B31F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift */,
 			);
@@ -516,11 +522,13 @@
 				3493C0621F20275D0099C58F /* CoreDataStack.swift in Sources */,
 				343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */,
 				343045B41F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift in Sources */,
+				3493C0781F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift in Sources */,
 				3493C05D1F2023060099C58F /* AllGamesGateway.swift in Sources */,
 				3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */,
 				3493C0571F2021B70099C58F /* PopGamesError.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
 				3493C05A1F2022E70099C58F /* ListTopGamesUseCase.swift in Sources */,
+				3493C0771F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
