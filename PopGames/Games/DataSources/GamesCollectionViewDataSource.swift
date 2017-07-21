@@ -8,7 +8,8 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Identifier.gamesCollection, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.Identifier.gamesCollection,
+                                                      for: indexPath)
         cell.backgroundColor = UIColor.red
         return cell
     }

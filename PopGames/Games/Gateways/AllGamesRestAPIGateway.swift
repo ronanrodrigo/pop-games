@@ -2,14 +2,8 @@ import Foundation
 
 struct AllGamesRestAPIGateway: AllGamesGateway {
 
-    private let url: URL
-
-    init(url: URL) {
-        self.url = url
-    }
-
     func allGames() -> Future<[Game]> {
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: URL.Twitch.topGame)
         request.httpMethod = String.HttpMetod.get
         request.addValue(String.Twitch.Header.clientId, forHTTPHeaderField: String.clientId)
         request.addValue(String.Twitch.Header.accept, forHTTPHeaderField: String.accept)
@@ -27,8 +21,9 @@ struct AllGamesRestAPIGateway: AllGamesGateway {
     private func generateResult(data: Data?, error: Error?) -> Result<[Game]> {
         if error == nil, let data = data {
             var twitchTopGames: TwitchTopGamesDecodable
-            do { twitchTopGames = try JSONDecoder().decode(TwitchTopGamesDecodable.self, from: data) }
-            catch let error { return Result.fail(error) }
+            do {
+                twitchTopGames = try JSONDecoder().decode(TwitchTopGamesDecodable.self, from: data)
+            } catch let error { return Result.fail(error) }
 
             let games = generateGameEntity(twitchTopGames: twitchTopGames)
             return Result.success(games)

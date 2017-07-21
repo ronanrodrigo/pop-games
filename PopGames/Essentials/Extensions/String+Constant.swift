@@ -15,4 +15,8 @@ extension String {
         static let get = "GET"
     }
 
+    struct Identifier {
+        static let gamesCollection = "GameCollectionViewCellIdentifier"
+    }
+
 }
