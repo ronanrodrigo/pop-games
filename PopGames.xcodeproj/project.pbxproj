@@ -34,8 +34,8 @@
 		3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */; };
 		3493C0771F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */; };
 		3493C0781F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */; };
-		3493C07A1F2030C80099C58F /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0791F2030C80099C58F /* String.swift */; };
-		3493C07D1F2031140099C58F /* Int32.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C07C1F2031140099C58F /* Int32.swift */; };
+		3493C07A1F2030C80099C58F /* String+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0791F2030C80099C58F /* String+Constants.swift */; };
+		3493C07D1F2031140099C58F /* Int32+ToInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C07C1F2031140099C58F /* Int32+ToInt.swift */; };
 		3493C0801F2044830099C58F /* AllGamesCoreDataGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C07F1F2044830099C58F /* AllGamesCoreDataGatewayTests.swift */; };
 		3493C0821F204BA60099C58F /* NSManagedObjectContext+InMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3493C0811F204BA60099C58F /* NSManagedObjectContext+InMemory.swift */; };
 		34C5C68F1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34C5C68E1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift */; };
@@ -89,8 +89,8 @@
 		3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesCoreDataGateway.swift; sourceTree = "<group>"; };
 		3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntityCoreData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameEntityCoreData+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		3493C0791F2030C80099C58F /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
-		3493C07C1F2031140099C58F /* Int32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int32.swift; sourceTree = "<group>"; };
+		3493C0791F2030C80099C58F /* String+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Constants.swift"; sourceTree = "<group>"; };
+		3493C07C1F2031140099C58F /* Int32+ToInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int32+ToInt.swift"; sourceTree = "<group>"; };
 		3493C07F1F2044830099C58F /* AllGamesCoreDataGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesCoreDataGatewayTests.swift; sourceTree = "<group>"; };
 		3493C0811F204BA60099C58F /* NSManagedObjectContext+InMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+InMemory.swift"; sourceTree = "<group>"; };
 		34C5C68E1F1F038D00B89151 /* ListTopGamesUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTopGamesUseCaseTests.swift; sourceTree = "<group>"; };
@@ -344,8 +344,8 @@
 		3493C07B1F2031080099C58F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3493C0791F2030C80099C58F /* String.swift */,
-				3493C07C1F2031140099C58F /* Int32.swift */,
+				3493C0791F2030C80099C58F /* String+Constants.swift */,
+				3493C07C1F2031140099C58F /* Int32+ToInt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -517,10 +517,10 @@
 				3493C0621F20275D0099C58F /* CoreDataStack.swift in Sources */,
 				343045A51F1A87C300BE6BBF /* Identifier.swift in Sources */,
 				343045B41F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift in Sources */,
-				3493C07A1F2030C80099C58F /* String.swift in Sources */,
+				3493C07A1F2030C80099C58F /* String+Constants.swift in Sources */,
 				3493C0781F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift in Sources */,
 				3458D2371F214B94004A4149 /* SaveGamesPresenter.swift in Sources */,
-				3493C07D1F2031140099C58F /* Int32.swift in Sources */,
+				3493C07D1F2031140099C58F /* Int32+ToInt.swift in Sources */,
 				3493C05D1F2023060099C58F /* AllGamesGateway.swift in Sources */,
 				3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */,
 				3493C0571F2021B70099C58F /* PopGamesError.swift in Sources */,
