@@ -2,7 +2,7 @@ import Foundation
 
 struct AllGamesRestAPIGatewayFactory {
 
-    static func make() -> AllGamesRestAPIGateway {
+    static func make() -> AllGamesGateway {
         return AllGamesRestAPIGateway()
     }
 
