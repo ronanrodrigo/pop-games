@@ -9,7 +9,7 @@ class SaveGamesPresenterStub: SaveGamesPresenter {
         savedStub = true
     }
 
-    func error(error: Error) {
+    func error(error: Error?) {
         errorStub = true
     }
 
