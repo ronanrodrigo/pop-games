@@ -9,18 +9,20 @@ default_platform :ios
 platform :ios do
 
   app_name = 'PopGames'
+  slather_output = ''
 
   desc 'Runs all the tests'
   lane :test do |options|
     should_open_coverage_report = options[:show_coverage] ? true : false
     scan workspace: "#{app_name}.xcworkspace", scheme: app_name
-    slather(
+    slather_output = slather(
       proj: "#{app_name}.xcodeproj",
       workspace: "#{app_name}.xcworkspace",
       scheme: app_name,
       output_directory: 'Coverage',
       show: should_open_coverage_report,
       simple_output: !should_open_coverage_report,
+      use_bundle_exec: true,
       html: true)
   end
 
@@ -42,11 +44,12 @@ platform :ios do
   end
 
   after_all do |lane|
+    slather_output_test_coverage = slather_output[/Coverage: \d*.*/, 0]
     ifttt(
       api_key: 'oQScghXjjsGKKujr8-YYiJtl7xlIq8dQz0rOGIVOabl',
       event_name: 'Fastlane',
       value1: "#{app_name}",
-      value2: "#{lane}",
+      value2: [lane, slather_output_test_coverage].map{|element| element.to_s.capitalize}.reject(&:empty?).join(' - '),
       value3: `whoami`
     )
   end
