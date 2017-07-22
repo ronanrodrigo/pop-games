@@ -49,7 +49,7 @@ platform :ios do
       api_key: 'oQScghXjjsGKKujr8-YYiJtl7xlIq8dQz0rOGIVOabl',
       event_name: 'Fastlane',
       value1: "#{app_name}",
-      value2: [lane, slather_output_test_coverage].map{|element| element.to_s.capitalize}.reject(&:empty?).join(' - '),
+      value2: [lane, slather_output_test_coverage].map(&:capitalize).reject(&:empty?).join(' - '),
       value3: `whoami`
     )
   end
