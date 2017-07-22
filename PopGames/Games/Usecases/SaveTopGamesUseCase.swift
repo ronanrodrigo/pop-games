@@ -16,9 +16,9 @@ struct SaveTopGamesUseCase {
     func save() {
         allGamesGateway
             .allGames()
-            .map({ games -> [Game] in
+            .map({
                 _ = self.cleanGamesGateway.clean()
-                return games
+                return $0
             })
             .flatMap(saveGamesGateway.save)
             .onResult({ result in
