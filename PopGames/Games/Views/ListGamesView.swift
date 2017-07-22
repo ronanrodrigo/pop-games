@@ -20,8 +20,9 @@ class ListGamesView: NibLoadableView {
     private func setupCollectionView() {
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
-        collectionView.register(GameCollectionViewCell.self,
-                                forCellWithReuseIdentifier: String.Identifier.gamesCollection)
+
+        let nib = UINib(nibName: String(describing: GameCollectionViewCell.self), bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: String.Identifier.gamesCollection)
     }
 
     func show(error: Error?) {
