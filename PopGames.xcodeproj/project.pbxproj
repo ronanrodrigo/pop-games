@@ -297,6 +297,7 @@
 		3493C04C1F2019370099C58F /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
+				34D2EBE11F2163E4000F2131 /* SaveGamesGatewayStub.swift */,
 				3493C04F1F2019700099C58F /* AllGamesGatewayStub.swift */,
 			);
 			path = Gateways;
@@ -357,7 +358,6 @@
 			isa = PBXGroup;
 			children = (
 				3493C07F1F2044830099C58F /* AllGamesCoreDataGatewayTests.swift */,
-				34D2EBE11F2163E4000F2131 /* SaveGamesGatewayStub.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
