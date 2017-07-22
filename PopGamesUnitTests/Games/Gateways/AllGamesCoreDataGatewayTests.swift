@@ -14,7 +14,8 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
         super.setUp()
         context = NSManagedObjectContext.inMemory()
         gateway = AllGamesCoreDataGateway(managedObjectContext: context)
-        create(game: GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers))
+        let game = GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers)
+        _ = SaveGamesCoreDataGateway(managedObjectContext: context).save(games: [game])
     }
 
     func testAllGamesWhenHasGamesThenReturnGamesArray() {
@@ -30,16 +31,4 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
         XCTAssertEqual(games[0].viewers, gameViewers)
     }
 
-    private func create(game: Game) {
-        let entityName = String(describing: GameEntityCoreData.self)
-        let gameCoreData = NSEntityDescription.insertNewObject(forEntityName: entityName,
-                                                               into: context) as? GameEntityCoreData
-
-        gameCoreData?.id = 0
-        gameCoreData?.name = game.name
-        gameCoreData?.viewers = Int32(game.viewers)
-        gameCoreData?.popularity = Int32(game.popularity)
-
-        try? context.save()
-    }
 }
