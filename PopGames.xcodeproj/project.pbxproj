@@ -60,6 +60,7 @@
 		34D7E64A1F236759000389CF /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7E6491F236759000389CF /* NibLoadable.swift */; };
 		34D7E64C1F23690C000389CF /* TimeInterval+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7E64B1F23690C000389CF /* TimeInterval+Constant.swift */; };
 		34D7E64E1F236B88000389CF /* CGFloat+Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7E64D1F236B88000389CF /* CGFloat+Constant.swift */; };
+		34D7E6501F236DDA000389CF /* SaveGamesUIKitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7E64F1F236DDA000389CF /* SaveGamesUIKitPresenter.swift */; };
 		34E4D3991F2142740065922D /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E4D3981F2142740065922D /* Future.swift */; };
 		34FB86B11F20550600619193 /* SaveTopGamesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */; };
 		34FB86B31F20552A00619193 /* SaveGamesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB86B21F20552A00619193 /* SaveGamesGateway.swift */; };
@@ -133,6 +134,7 @@
 		34D7E6491F236759000389CF /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		34D7E64B1F23690C000389CF /* TimeInterval+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Constant.swift"; sourceTree = "<group>"; };
 		34D7E64D1F236B88000389CF /* CGFloat+Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Constant.swift"; sourceTree = "<group>"; };
+		34D7E64F1F236DDA000389CF /* SaveGamesUIKitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesUIKitPresenter.swift; sourceTree = "<group>"; };
 		34E4D3981F2142740065922D /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
 		34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTopGamesUseCase.swift; sourceTree = "<group>"; };
 		34FB86B21F20552A00619193 /* SaveGamesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesGateway.swift; sourceTree = "<group>"; };
@@ -370,6 +372,7 @@
 			children = (
 				3493C05F1F20231E0099C58F /* ListTopGamesPresenter.swift */,
 				3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */,
+				34D7E64F1F236DDA000389CF /* SaveGamesUIKitPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -598,6 +601,7 @@
 				34B0A3BB1F2255EA0092A3EE /* URL+Constant.swift in Sources */,
 				3458D2371F214B94004A4149 /* SaveGamesPresenter.swift in Sources */,
 				34B0A3BE1F228F9D0092A3EE /* AllGamesRestAPIGatewayFactory.swift in Sources */,
+				34D7E6501F236DDA000389CF /* SaveGamesUIKitPresenter.swift in Sources */,
 				34D7E6481F23650C000389CF /* LoadingView.swift in Sources */,
 				34D7E64C1F23690C000389CF /* TimeInterval+Constant.swift in Sources */,
 				34D2EBE41F223F7A000F2131 /* AllGamesRestAPIGateway.swift in Sources */,

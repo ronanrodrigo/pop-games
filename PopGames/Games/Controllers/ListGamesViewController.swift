@@ -9,6 +9,10 @@ class ListGamesViewController: UIViewController {
     private let collectionViewDelegate = GamesCollectionViewDelegate()
     private let collectionViewDataSource = GamesCollectionViewDataSource()
 
+    private lazy var saveGamesPresenter: SaveGamesUIKitPresenter = {
+        return SaveGamesUIKitPresenter(loadingView: self.loadingView)
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDataProviders()
@@ -21,24 +25,7 @@ class ListGamesViewController: UIViewController {
     }
 
     private func saveTopGames() {
-        SaveTopGamesUseCaseFactory.make(saveGamesPresenter: self).save()
+        SaveTopGamesUseCaseFactory.make(saveGamesPresenter: saveGamesPresenter).save()
     }
 
-}
-
-extension ListGamesViewController: SaveGamesPresenter {
-
-    func saved() {
-        stopLoading()
-    }
-
-    func error(error: Error?) {
-        stopLoading()
-    }
-
-    private func stopLoading() {
-        DispatchQueue.main.async { [unowned self] in
-            self.loadingView.stopLoading()
-        }
-    }
 }
