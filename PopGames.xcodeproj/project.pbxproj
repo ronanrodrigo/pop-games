@@ -170,7 +170,6 @@
 				341A12751F17196700795FC8 /* Essentials */,
 				341A127E1F171E1F00795FC8 /* Games */,
 				34D7E6411F2363F3000389CF /* Shared */,
-				341A12481F1718F900795FC8 /* Main.storyboard */,
 			);
 			path = PopGames;
 			sourceTree = "<group>";
@@ -425,10 +424,19 @@
 		34D7E6411F2363F3000389CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				34D7E6421F23643B000389CF /* Views */,
 				3493C07B1F2031080099C58F /* Extensions */,
 				3493C0551F2021A40099C58F /* Helpers */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		34D7E6421F23643B000389CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				341A12481F1718F900795FC8 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
