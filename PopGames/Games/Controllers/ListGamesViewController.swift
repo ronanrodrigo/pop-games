@@ -2,30 +2,21 @@ import UIKit
 
 class ListGamesViewController: UIViewController {
 
-    @IBOutlet fileprivate weak var loadingView: LoadingView!
-    @IBOutlet private weak var gamesCollectionView: UICollectionView!
-
-    // swiftlint:disable:next weak_delegate
-    private let collectionViewDelegate = GamesCollectionViewDelegate()
-    private let collectionViewDataSource = GamesCollectionViewDataSource()
-
-    private lazy var saveGamesPresenter: SaveGamesUIKitPresenter = {
-        return SaveGamesUIKitPresenter(loadingView: self.loadingView)
-    }()
+    @IBOutlet private var listGamesView: ListGamesView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupDataProviders()
         saveTopGames()
     }
 
-    private func setupDataProviders() {
-        gamesCollectionView.dataSource = collectionViewDataSource
-        gamesCollectionView.delegate = collectionViewDelegate
+    private func saveTopGames() {
+        SaveTopGamesUseCaseFactory.make(saveGamesPresenter: listGamesView.saveGamesPresenter).save()
+        NotificationCenter.default.addObserver(self, selector: #selector(listTopGames),
+                                               name: NSNotification.Name.Game.didSaveGames, object: nil)
     }
 
-    private func saveTopGames() {
-        SaveTopGamesUseCaseFactory.make(saveGamesPresenter: saveGamesPresenter).save()
+    @objc private func listTopGames() {
+        ListTopGamesUseCaseFactory.make(presenter: listGamesView.listTopGamesPresenter).list()
     }
 
 }

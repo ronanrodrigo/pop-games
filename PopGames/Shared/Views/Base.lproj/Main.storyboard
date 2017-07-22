@@ -16,51 +16,14 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="ListGamesView" customModule="PopGames" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="aHV-bi-NLM">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ee6-I9-xMd">
-                                    <size key="itemSize" width="50" height="50"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCollectionViewCellIdentifier" id="qBZ-5x-Man">
-                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </view>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X0U-4e-pcT" customClass="LoadingView" customModule="PopGames" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="aHV-bi-NLM" secondAttribute="trailing" id="3lV-kU-9tx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X0U-4e-pcT" secondAttribute="bottom" id="SUs-VY-JRp"/>
-                            <constraint firstItem="aHV-bi-NLM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XkM-uM-Qna"/>
-                            <constraint firstItem="aHV-bi-NLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h48-Jp-cTb"/>
-                            <constraint firstAttribute="trailing" secondItem="X0U-4e-pcT" secondAttribute="trailing" id="mWy-Ce-bDK"/>
-                            <constraint firstItem="X0U-4e-pcT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="twy-g1-zYB"/>
-                            <constraint firstAttribute="bottom" secondItem="aHV-bi-NLM" secondAttribute="bottom" id="wCx-4x-kr4"/>
-                            <constraint firstItem="X0U-4e-pcT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yaq-9K-btY"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rgQ-IS-bM5"/>
                     <connections>
-                        <outlet property="gamesCollectionView" destination="aHV-bi-NLM" id="Oyy-vn-hCI"/>
-                        <outlet property="loadingView" destination="X0U-4e-pcT" id="WBu-Z5-eDA"/>
+                        <outlet property="listGamesView" destination="8bC-Xf-vdC" id="qaH-KR-nAi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
