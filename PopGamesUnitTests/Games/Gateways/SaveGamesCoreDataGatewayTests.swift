@@ -21,17 +21,17 @@ class SaveGamesCoreDataGatewayTests: XCTestCase {
     func testSaveGamesWhenSuccessThenSaveGames() {
         let gamesToSave: [Game] = [GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers),
                                    GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers)]
-        var games: [Game] = []
+        var savedGames: [Game] = []
 
         saveGamesCoreDataGateway.save(games: gamesToSave).flatMap(allGamesCoreDataGateway.allGames).onResult {
             if case Result<[Game]>.success(let requestedGames) = $0 {
-                games = requestedGames
+                savedGames = requestedGames
             }
         }
 
-        XCTAssertEqual(games.count, gamesToSave.count)
-        XCTAssertEqual(games[0].name, gameName)
-        XCTAssertEqual(games[0].popularity, gamePopularity)
-        XCTAssertEqual(games[0].viewers, gameViewers)
+        XCTAssertEqual(savedGames.count, gamesToSave.count)
+        XCTAssertEqual(savedGames[0].name, gameName)
+        XCTAssertEqual(savedGames[0].popularity, gamePopularity)
+        XCTAssertEqual(savedGames[0].viewers, gameViewers)
     }
 }
