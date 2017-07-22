@@ -12,7 +12,11 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String.Identifier.gamesCollection,
                                                       for: indexPath)
-        cell.backgroundColor = UIColor.red
+
+        if let gameCell = cell as? GameCollectionViewCell {
+            gameCell.setup(name: games[indexPath.row].name)
+        }
+
         return cell
     }
 
