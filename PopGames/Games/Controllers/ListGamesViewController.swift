@@ -11,6 +11,7 @@ class ListGamesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDataProviders()
+        saveTopGames()
     }
 
     private func setupDataProviders() {
@@ -18,4 +19,18 @@ class ListGamesViewController: UIViewController {
         gamesCollectionView.delegate = collectionViewDelegate
     }
 
+    private func saveTopGames() {
+        SaveTopGamesUseCaseFactory.make(saveGamesPresenter: self).save()
+    }
+
+}
+
+extension ListGamesViewController: SaveGamesPresenter {
+    func saved() {
+        print("saved")
+    }
+
+    func error(error: Error?) {
+        print("error")
+    }
 }
