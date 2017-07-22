@@ -8,15 +8,16 @@ struct AllGamesCoreDataGateway: AllGamesGateway {
         self.managedObjectContext = managedObjectContext
     }
 
-    func allGames(onComplete: ((Result<[Game]>) -> Void)) {
-        let fetchGames: NSFetchRequest<GameEntityCoreData> = GameEntityCoreData.fetchRequest()
-
-        do {
-            let games = try managedObjectContext.fetch(fetchGames)
-            let gamesEntities = games.map(generateEntity)
-            onComplete(Result.success(gamesEntities))
-        } catch {
-            onComplete(Result.fail(error))
+    func allGames() -> Future<[Game]> {
+        return Future { completion in
+            do {
+                let fetchGames: NSFetchRequest<GameEntityCoreData> = GameEntityCoreData.fetchRequest()
+                let games = try managedObjectContext.fetch(fetchGames)
+                let gamesEntities = games.map(generateEntity)
+                completion(Result.success(gamesEntities))
+            } catch {
+                completion(Result.fail(error))
+            }
         }
     }
 

@@ -9,7 +9,7 @@ class ListTopGamesPresenterStub: ListTopGamesPresenter {
         listGamesStub = true
     }
 
-    func show(error: Error) {
+    func show(error: Error?) {
         showErrorStub = true
     }
 
