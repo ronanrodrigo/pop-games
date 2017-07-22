@@ -200,11 +200,11 @@
 		341A127E1F171E1F00795FC8 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				34B0A3BC1F228F7F0092A3EE /* Factories */,
 				341A127F1F171E2700795FC8 /* Controllers */,
 				342A54DD1F172FB100479D49 /* DataSources */,
 				342A54DA1F172F8600479D49 /* Delegates */,
 				343045A61F1A92AC00BE6BBF /* Entities */,
+				34B0A3BC1F228F7F0092A3EE /* Factories */,
 				3493C05B1F2022F80099C58F /* Gateways */,
 				3493C05E1F2023130099C58F /* Presenters */,
 				3493C0581F2022DD0099C58F /* Usecases */,
@@ -239,9 +239,9 @@
 		343045A61F1A92AC00BE6BBF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
 				3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */,
 				3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */,
-				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
 				343045B31F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift */,
 			);
 			path = Entities;
@@ -345,13 +345,13 @@
 		3493C05B1F2022F80099C58F /* Gateways */ = {
 			isa = PBXGroup;
 			children = (
-				3493C05C1F2023060099C58F /* AllGamesGateway.swift */,
 				3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */,
+				3493C05C1F2023060099C58F /* AllGamesGateway.swift */,
 				34D2EBE31F223F7A000F2131 /* AllGamesRestAPIGateway.swift */,
-				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
-				34B0A3C11F2290A70092A3EE /* SaveGamesCoreDataGateway.swift */,
-				34D7E6331F233EA8000389CF /* CleanGamesGateway.swift */,
 				34D7E6351F233ED4000389CF /* CleanGamesCoreDataGateway.swift */,
+				34D7E6331F233EA8000389CF /* CleanGamesGateway.swift */,
+				34B0A3C11F2290A70092A3EE /* SaveGamesCoreDataGateway.swift */,
+				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -388,12 +388,12 @@
 		34B0A3BC1F228F7F0092A3EE /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				34B0A3BD1F228F9D0092A3EE /* AllGamesRestAPIGatewayFactory.swift */,
 				34B0A3BF1F228FC80092A3EE /* AllGamesCoreDataGatewayFactory.swift */,
-				34D7E62D1F23366F000389CF /* SaveTopGamesUseCaseFactory.swift */,
-				34D7E62F1F2336A9000389CF /* SaveGamesCoreDataGatewayFactory.swift */,
-				34D7E6311F233B09000389CF /* ManagedObjectContextFactory.swift */,
+				34B0A3BD1F228F9D0092A3EE /* AllGamesRestAPIGatewayFactory.swift */,
 				34D7E6371F234199000389CF /* CleanGamesCoreDataGatewayFactory.swift */,
+				34D7E6311F233B09000389CF /* ManagedObjectContextFactory.swift */,
+				34D7E62F1F2336A9000389CF /* SaveGamesCoreDataGatewayFactory.swift */,
+				34D7E62D1F23366F000389CF /* SaveTopGamesUseCaseFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
