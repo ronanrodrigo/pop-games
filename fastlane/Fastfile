@@ -41,4 +41,14 @@ platform :ios do
     # frameit
   end
 
+  after_all do |lane|
+    ifttt(
+      api_key: 'oQScghXjjsGKKujr8-YYiJtl7xlIq8dQz0rOGIVOabl',
+      event_name: 'Fastlane',
+      value1: "#{app_name}",
+      value2: "#{lane}",
+      value3: `whoami`
+    )
+  end
+
 end
