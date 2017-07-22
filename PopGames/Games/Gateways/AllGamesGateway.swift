@@ -1,3 +1,3 @@
 protocol AllGamesGateway {
-    func allGames(onComplete: ((Result<[Game]>) -> Void))
+    func allGames() -> Future<[Game]>
 }
