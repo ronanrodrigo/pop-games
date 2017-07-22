@@ -169,6 +169,7 @@
 			children = (
 				341A12751F17196700795FC8 /* Essentials */,
 				341A127E1F171E1F00795FC8 /* Games */,
+				34D7E6411F2363F3000389CF /* Shared */,
 				341A12481F1718F900795FC8 /* Main.storyboard */,
 			);
 			path = PopGames;
@@ -186,8 +187,6 @@
 		341A12751F17196700795FC8 /* Essentials */ = {
 			isa = PBXGroup;
 			children = (
-				3493C07B1F2031080099C58F /* Extensions */,
-				3493C0551F2021A40099C58F /* Helpers */,
 				341A12441F1718F900795FC8 /* AppDelegate.swift */,
 				341A124E1F1718F900795FC8 /* Assets.xcassets */,
 				341A12531F1718F900795FC8 /* Info.plist */,
@@ -325,10 +324,10 @@
 		3493C0551F2021A40099C58F /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				3493C0561F2021B70099C58F /* PopGamesError.swift */,
-				3493C0531F201D3B0099C58F /* Result.swift */,
 				3493C0611F20275D0099C58F /* CoreDataStack.swift */,
 				34E4D3981F2142740065922D /* Future.swift */,
+				3493C0561F2021B70099C58F /* PopGamesError.swift */,
+				3493C0531F201D3B0099C58F /* Result.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -368,8 +367,8 @@
 		3493C07B1F2031080099C58F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				3493C0791F2030C80099C58F /* String+Constant.swift */,
 				3493C07C1F2031140099C58F /* Int32+ToInt.swift */,
+				3493C0791F2030C80099C58F /* String+Constant.swift */,
 				34B0A3BA1F2255EA0092A3EE /* URL+Constant.swift */,
 			);
 			path = Extensions;
@@ -421,6 +420,15 @@
 				34D2EBDF1F21637C000F2131 /* SaveGamesPresenterStub.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		34D7E6411F2363F3000389CF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3493C07B1F2031080099C58F /* Extensions */,
+				3493C0551F2021A40099C58F /* Helpers */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
