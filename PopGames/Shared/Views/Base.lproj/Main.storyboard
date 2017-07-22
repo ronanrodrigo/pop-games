@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dET-KG-HTX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dET-KG-HTX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,18 +40,27 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="X0U-4e-pcT" customClass="LoadingView" customModule="PopGames" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="aHV-bi-NLM" secondAttribute="trailing" id="3lV-kU-9tx"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X0U-4e-pcT" secondAttribute="bottom" id="SUs-VY-JRp"/>
                             <constraint firstItem="aHV-bi-NLM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XkM-uM-Qna"/>
                             <constraint firstItem="aHV-bi-NLM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h48-Jp-cTb"/>
+                            <constraint firstAttribute="trailing" secondItem="X0U-4e-pcT" secondAttribute="trailing" id="mWy-Ce-bDK"/>
+                            <constraint firstItem="X0U-4e-pcT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="twy-g1-zYB"/>
                             <constraint firstAttribute="bottom" secondItem="aHV-bi-NLM" secondAttribute="bottom" id="wCx-4x-kr4"/>
+                            <constraint firstItem="X0U-4e-pcT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="yaq-9K-btY"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rgQ-IS-bM5"/>
                     <connections>
                         <outlet property="gamesCollectionView" destination="aHV-bi-NLM" id="Oyy-vn-hCI"/>
+                        <outlet property="loadingView" destination="X0U-4e-pcT" id="WBu-Z5-eDA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

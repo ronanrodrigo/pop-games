@@ -2,6 +2,7 @@ import UIKit
 
 class ListGamesViewController: UIViewController {
 
+    @IBOutlet fileprivate weak var loadingView: LoadingView!
     @IBOutlet private weak var gamesCollectionView: UICollectionView!
 
     // swiftlint:disable:next weak_delegate
@@ -26,11 +27,18 @@ class ListGamesViewController: UIViewController {
 }
 
 extension ListGamesViewController: SaveGamesPresenter {
+
     func saved() {
-        print("saved")
+        stopLoading()
     }
 
     func error(error: Error?) {
-        print("error")
+        stopLoading()
+    }
+
+    private func stopLoading() {
+        DispatchQueue.main.async { [unowned self] in
+            self.loadingView.stopLoading()
+        }
     }
 }
