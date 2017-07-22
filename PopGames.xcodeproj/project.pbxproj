@@ -46,6 +46,7 @@
 		34D2EBE01F21637C000F2131 /* SaveGamesPresenterStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2EBDF1F21637C000F2131 /* SaveGamesPresenterStub.swift */; };
 		34D2EBE21F2163E4000F2131 /* SaveGamesGatewayStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2EBE11F2163E4000F2131 /* SaveGamesGatewayStub.swift */; };
 		34D2EBE41F223F7A000F2131 /* AllGamesRestAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D2EBE31F223F7A000F2131 /* AllGamesRestAPIGateway.swift */; };
+		34D7E62C1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34D7E62B1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift */; };
 		34E4D3991F2142740065922D /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34E4D3981F2142740065922D /* Future.swift */; };
 		34FB86B11F20550600619193 /* SaveTopGamesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */; };
 		34FB86B31F20552A00619193 /* SaveGamesGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FB86B21F20552A00619193 /* SaveGamesGateway.swift */; };
@@ -105,6 +106,7 @@
 		34D2EBDF1F21637C000F2131 /* SaveGamesPresenterStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesPresenterStub.swift; sourceTree = "<group>"; };
 		34D2EBE11F2163E4000F2131 /* SaveGamesGatewayStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesGatewayStub.swift; sourceTree = "<group>"; };
 		34D2EBE31F223F7A000F2131 /* AllGamesRestAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGamesRestAPIGateway.swift; sourceTree = "<group>"; };
+		34D7E62B1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesCoreDataGatewayTests.swift; sourceTree = "<group>"; };
 		34E4D3981F2142740065922D /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
 		34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveTopGamesUseCase.swift; sourceTree = "<group>"; };
 		34FB86B21F20552A00619193 /* SaveGamesGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesGateway.swift; sourceTree = "<group>"; };
@@ -358,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				3493C07F1F2044830099C58F /* AllGamesCoreDataGatewayTests.swift */,
+				34D7E62B1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				3493C04E1F2019650099C58F /* ListTopGamesPresenterStub.swift in Sources */,
 				34D2EBDD1F2162D7000F2131 /* SaveTopGamesUseCaseTests.swift in Sources */,
 				34D2EBE01F21637C000F2131 /* SaveGamesPresenterStub.swift in Sources */,
+				34D7E62C1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift in Sources */,
 				3493C0801F2044830099C58F /* AllGamesCoreDataGatewayTests.swift in Sources */,
 				3493C0821F204BA60099C58F /* NSManagedObjectContext+InMemory.swift in Sources */,
 				343045C01F1AA55700BE6BBF /* JSONDecoder+Decode.swift in Sources */,
