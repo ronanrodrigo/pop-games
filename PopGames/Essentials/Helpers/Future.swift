@@ -24,6 +24,21 @@ class Future<A> {
         }
     }
 
+    func map<B>(_ compute: @escaping (A) -> B) -> Future<B> {
+        return Future<B> { completion in
+            self.onResult { result in
+                switch result {
+                case .success(let resultValue):
+                    let transformedValue = compute(resultValue)
+                    completion(Result.success(transformedValue))
+                case .fail(let error):
+                    completion(Result.fail(error))
+
+                }
+            }
+        }
+    }
+
     func flatMap<B>(_ transform: @escaping (A) -> Future<B>) -> Future<B> {
         return Future<B> { completion in
             self.onResult { result in
