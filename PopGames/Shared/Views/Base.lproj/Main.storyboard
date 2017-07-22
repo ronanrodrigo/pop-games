@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--List Games View Controller-->
+        <!--Twitch Pop Games-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ListGamesViewController" customModule="PopGames" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,7 +21,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rgQ-IS-bM5"/>
+                    <navigationItem key="navigationItem" title="Twitch Pop Games" largeTitleDisplayMode="always" id="rgQ-IS-bM5"/>
                     <connections>
                         <outlet property="listGamesView" destination="8bC-Xf-vdC" id="qaH-KR-nAi"/>
                     </connections>
