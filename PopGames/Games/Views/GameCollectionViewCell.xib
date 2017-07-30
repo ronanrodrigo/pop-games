@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13156.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13137.5"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="YES" reuseIdentifier="GameCollectionViewCellIdentifier" id="gTV-IL-0wX" customClass="GameCollectionViewCell" customModule="PopGames" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Counter-Strike" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-dI-65j">
+                        <rect key="frame" x="-40" y="-106" width="330" height="462"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="9n5-dI-65j" secondAttribute="height" multiplier="0.715" id="G3f-U6-Ufg"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fbk-87-4VO">
+                        <rect key="frame" x="0.0" y="167" width="250" height="83"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Counter-Strike: Global Offensive" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4z-Wb-9gy">
+                        <rect key="frame" x="8" y="175" width="234" height="67"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                        <color key="shadowColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
+                        <size key="shadowOffset" width="1" height="1"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="n4z-Wb-9gy" firstAttribute="top" secondItem="fbk-87-4VO" secondAttribute="top" constant="8" id="2uq-0N-yyK"/>
+                <constraint firstAttribute="bottom" secondItem="n4z-Wb-9gy" secondAttribute="bottom" constant="8" id="7Ag-Pd-Saq"/>
+                <constraint firstAttribute="bottom" secondItem="fbk-87-4VO" secondAttribute="bottom" id="IHn-hg-bRv"/>
+                <constraint firstItem="n4z-Wb-9gy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Mig-aE-f3h"/>
+                <constraint firstItem="9n5-dI-65j" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="P05-Hc-ABF"/>
+                <constraint firstItem="fbk-87-4VO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pvo-8H-rcv"/>
+                <constraint firstItem="fbk-87-4VO" firstAttribute="height" secondItem="9n5-dI-65j" secondAttribute="height" multiplier="0.18" id="ibl-Em-HOI"/>
+                <constraint firstAttribute="trailing" secondItem="9n5-dI-65j" secondAttribute="trailing" constant="-40" id="nw9-Yd-nIj"/>
+                <constraint firstAttribute="trailing" secondItem="n4z-Wb-9gy" secondAttribute="trailing" constant="8" id="qPX-q5-10t"/>
+                <constraint firstItem="9n5-dI-65j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-40" id="wnJ-ZL-va2"/>
+                <constraint firstAttribute="trailing" secondItem="fbk-87-4VO" secondAttribute="trailing" id="z0j-At-6Jb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="150" height="227"/>
+            <connections>
+                <outlet property="coverImageView" destination="9n5-dI-65j" id="JK7-Pt-42o"/>
+                <outlet property="nameBackgroundView" destination="fbk-87-4VO" id="aXm-4b-cgA"/>
+                <outlet property="nameLabel" destination="n4z-Wb-9gy" id="1rF-qS-fT9"/>
+            </connections>
+            <point key="canvasLocation" x="92" y="-107"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Counter-Strike" width="272" height="380"/>
+    </resources>
+</document>

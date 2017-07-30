@@ -26,7 +26,7 @@ struct SaveTopGamesUseCase {
                 case .success:
                     self.saveGamesPresenter.saved()
                 case .fail(let error):
-                    self.saveGamesPresenter.error(error: error)
+                    self.saveGamesPresenter.show(error: error)
                 }
             })
     }
