@@ -19,10 +19,19 @@ extension TwitchTopGamesDecodable.TopGameDecodable {
         let name: String
         let popularity: Int
         let id: Int
+        let box: BoxDecodable
 
         enum CodingKeys: String, CodingKey {
-            case id = "_id", popularity, name
+            case id = "_id", popularity, name, box
         }
+    }
+
+}
+
+extension TwitchTopGamesDecodable.TopGameDecodable.GameDecodable {
+
+    struct BoxDecodable: Decodable {
+        let large: String
     }
 
 }

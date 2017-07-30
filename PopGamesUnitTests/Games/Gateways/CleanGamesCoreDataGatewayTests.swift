@@ -4,7 +4,7 @@ import CoreData
 
 class CleanGamesCoreDataGatewayTests: XCTestCase {
 
-    private let game: Game = GameEntity(name: "Counter Strike", popularity: 10, viewers: 10)
+    private let game: Game = GameEntity(id: 0, coverUrl: "", name: "Counter Strike", popularity: 10, viewers: 10)
     private var cleanGamesCoreDataGateway: CleanGamesGateway!
     private var allGamesCoreDataGateway: AllGamesGateway!
 

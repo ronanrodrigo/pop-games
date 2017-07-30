@@ -7,6 +7,8 @@ class SaveGamesCoreDataGatewayTests: XCTestCase {
     private let gameName = "Counter Strike"
     private let gamePopularity = 10
     private let gameViewers = 20
+    private let gameCoverUrl = "http://www.com.br"
+    private let gameId = 666
     private var allGamesCoreDataGateway: AllGamesCoreDataGateway!
     private var saveGamesCoreDataGateway: SaveGamesCoreDataGateway!
     private var context: NSManagedObjectContext!
@@ -19,8 +21,9 @@ class SaveGamesCoreDataGatewayTests: XCTestCase {
     }
 
     func testSaveGamesWhenSuccessThenSaveGames() {
-        let gamesToSave: [Game] = [GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers),
-                                   GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers)]
+        let gameEntity = GameEntity(id: gameId, coverUrl: gameCoverUrl, name: gameName, popularity: gamePopularity,
+                                    viewers: gameViewers)
+        let gamesToSave: [Game] = [gameEntity, gameEntity]
         var savedGames: [Game] = []
 
         saveGamesCoreDataGateway.save(games: gamesToSave).flatMap(allGamesCoreDataGateway.allGames).onResult {
@@ -30,6 +33,8 @@ class SaveGamesCoreDataGatewayTests: XCTestCase {
         }
 
         XCTAssertEqual(savedGames.count, gamesToSave.count)
+        XCTAssertEqual(savedGames[0].id, gameId)
+        XCTAssertEqual(savedGames[0].coverUrl, gameCoverUrl)
         XCTAssertEqual(savedGames[0].name, gameName)
         XCTAssertEqual(savedGames[0].popularity, gamePopularity)
         XCTAssertEqual(savedGames[0].viewers, gameViewers)
