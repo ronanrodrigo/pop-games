@@ -3,7 +3,7 @@ import UIKit
 class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
     private var games: [Game] = []
-    private var gamesCovers: [Int: UIImage] = [:]
+    private var gamesCovers: [Int: UIImage?] = [:]
     private let loadImageUsecase: LoadImageUsecase
 
     init(loadImageUsecase: LoadImageUsecase) {
@@ -21,9 +21,12 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
 
         if let gameCell = cell as? GameCollectionViewCell {
             let game = games[indexPath.row]
-            loadImageUsecase.load(id: game.id, url: game.coverUrl)
+            if hasCover(forId: game.id) {
+                gameCell.setup(cover: gameCover(byId: game.id))
+            } else {
+                loadImageUsecase.load(id: game.id, url: game.coverUrl)
+            }
             gameCell.setup(name: game.name)
-            gameCell.setup(cover: gameCover(byId: game.id))
         }
 
         return cell
@@ -33,7 +36,7 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         self.games = games
     }
 
-    func updateGameCover(withId id: Int, image: UIImage) {
+    func updateGameCover(withId id: Int, image: UIImage?) {
         self.gamesCovers[id] = image
     }
 
@@ -41,11 +44,15 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         return games.index { $0.id == id }
     }
 
-    private func gameCover(byId id: Int) -> UIImage {
-        if let gameCoverAtId = gamesCovers[id] {
-            return gameCoverAtId
+    private func hasCover(forId id: Int) -> Bool {
+        return gamesCovers.keys.contains(id)
+    }
+
+    private func gameCover(byId id: Int) -> UIImage? {
+        if let cover = gamesCovers[id] {
+            return cover
         }
-        return #imageLiteral(resourceName: "Counter-Strike")
+        return nil
     }
 
 }

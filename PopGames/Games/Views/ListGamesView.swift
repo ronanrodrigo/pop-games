@@ -29,6 +29,8 @@ class ListGamesView: NibLoadableView {
 
     func show(error: Error?) {
         loadingView.stopLoading()
+        guard let error = error else { return }
+        print(error)
     }
 }
 
@@ -53,7 +55,7 @@ extension ListGamesView: SaveGamesPresenter {
 extension ListGamesView: LoadImagePresenter {
 
     func show(data: Data, forId id: Int) {
-        let image = UIImage(data: data) ?? #imageLiteral(resourceName: "Counter-Strike")
+        let image = UIImage(data: data)
         collectionViewDataSource.updateGameCover(withId: id, image: image)
 
         if let row = self.collectionViewDataSource.index(ofId: id) {
