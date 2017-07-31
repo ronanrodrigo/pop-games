@@ -1,12 +1,18 @@
 import UIKit
 
+protocol DidSelectGame {
+    func didSelectGameAt(row: Int)
+}
+
 class ListGamesViewController: UIViewController {
 
     @IBOutlet private var listGamesView: ListGamesView! {
         didSet {
             listGamesView.setup(refreshControl: refreshControl)
+            listGamesView.setup(didSelectGame: self)
         }
     }
+
     private lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshGames), for: .valueChanged)
@@ -31,6 +37,19 @@ class ListGamesViewController: UIViewController {
     @objc private func refreshGames() {
         saveTopGames()
         listTopGames()
+    }
+
+}
+
+extension ListGamesViewController: DidSelectGame {
+
+    func didSelectGameAt(row: Int) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        guard let gameDetailViewController = storyboard.instantiateViewController(
+            withIdentifier: "GameDetailViewController") as? GameDetailViewController else { return }
+        let gameAndImage = listGamesView.gameAt(row: row)
+        gameDetailViewController.setup(game: gameAndImage.game, cover: gameAndImage.cover)
+        navigationController?.pushViewController(gameDetailViewController, animated: true)
     }
 
 }

@@ -48,5 +48,38 @@
             </objects>
             <point key="canvasLocation" x="-854" y="139"/>
         </scene>
+        <!--Game Detail View Controller-->
+        <scene sceneID="wTe-CO-qMT">
+            <objects>
+                <viewController storyboardIdentifier="GameDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ZMG-UX-fRn" customClass="GameDetailViewController" customModule="PopGames" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T58-nw-XHw"/>
+                        <viewControllerLayoutGuide type="bottom" id="qkQ-5p-VOg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" id="I5y-Cp-sdt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cea-Ws-iaa" customClass="GameDetailView" customModule="PopGames" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cea-Ws-iaa" firstAttribute="top" secondItem="I5y-Cp-sdt" secondAttribute="top" id="Giu-QB-ADY"/>
+                            <constraint firstItem="qkQ-5p-VOg" firstAttribute="top" secondItem="Cea-Ws-iaa" secondAttribute="bottom" id="OmR-Jq-yfV"/>
+                            <constraint firstAttribute="trailing" secondItem="Cea-Ws-iaa" secondAttribute="trailing" id="cXB-H2-of4"/>
+                            <constraint firstItem="Cea-Ws-iaa" firstAttribute="leading" secondItem="I5y-Cp-sdt" secondAttribute="leading" id="jTp-eB-QT2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameDetailView" destination="Cea-Ws-iaa" id="Uf6-WN-nKd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Er8-jJ-eFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="811.84407796101959"/>
+        </scene>
     </scenes>
 </document>
