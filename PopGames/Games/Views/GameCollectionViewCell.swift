@@ -29,4 +29,8 @@ class GameCollectionViewCell: UICollectionViewCell {
         nameLabel.text = name
     }
 
+    func setup(cover: UIImage) {
+        coverImageView.image = cover
+    }
+
 }
