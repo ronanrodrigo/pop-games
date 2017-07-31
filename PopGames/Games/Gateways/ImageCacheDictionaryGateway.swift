@@ -13,7 +13,7 @@ class ImageCacheDictionaryGateway: ImageCacheGateway {
     }
 
     func value(forKey key: Int) throws -> Data {
-        guard let data = cachedImages[key] else { throw ImageCacheException.notFound }
+        guard let data = cachedImages[key] else { throw ImageCacheError.notFound }
         return data
     }
 

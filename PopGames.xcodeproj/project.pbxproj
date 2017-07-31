@@ -20,7 +20,7 @@
 		343045BE1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */; };
 		343045C01F1AA55700BE6BBF /* JSONDecoder+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */; };
 		3458D2371F214B94004A4149 /* SaveGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */; };
-		346BFE911F2EB8C5009F439E /* ImageCacheException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE901F2EB8C5009F439E /* ImageCacheException.swift */; };
+		346BFE911F2EB8C5009F439E /* ImageCacheError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE901F2EB8C5009F439E /* ImageCacheError.swift */; };
 		346BFE931F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE921F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift */; };
 		346BFE951F2EBF69009F439E /* LoadImageRestAPIGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE941F2EBF69009F439E /* LoadImageRestAPIGateway.swift */; };
 		346BFE971F2EBFE9009F439E /* LoadImageRestAPIGatewayError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE961F2EBFE9009F439E /* LoadImageRestAPIGatewayError.swift */; };
@@ -117,7 +117,7 @@
 		343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
 		343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Decode.swift"; sourceTree = "<group>"; };
 		3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesPresenter.swift; sourceTree = "<group>"; };
-		346BFE901F2EB8C5009F439E /* ImageCacheException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheException.swift; sourceTree = "<group>"; };
+		346BFE901F2EB8C5009F439E /* ImageCacheError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheError.swift; sourceTree = "<group>"; };
 		346BFE921F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheDictionaryGatewayTests.swift; sourceTree = "<group>"; };
 		346BFE941F2EBF69009F439E /* LoadImageRestAPIGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageRestAPIGateway.swift; sourceTree = "<group>"; };
 		346BFE961F2EBFE9009F439E /* LoadImageRestAPIGatewayError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageRestAPIGatewayError.swift; sourceTree = "<group>"; };
@@ -256,14 +256,13 @@
 		341A127E1F171E1F00795FC8 /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				34D7E6571F238D5B000389CF /* Views */,
+				343199951F2FA74200007500 /* Core */,
 				341A127F1F171E2700795FC8 /* Controllers */,
 				342A54DD1F172FB100479D49 /* DataSources & Delegates */,
 				343045A61F1A92AC00BE6BBF /* Entities */,
 				34B0A3BC1F228F7F0092A3EE /* Factories */,
 				3493C05B1F2022F80099C58F /* Gateways */,
-				3493C05E1F2023130099C58F /* Presenters */,
-				3493C0581F2022DD0099C58F /* Usecases */,
+				34D7E6571F238D5B000389CF /* Views */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -288,10 +287,8 @@
 		343045A61F1A92AC00BE6BBF /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
 				3493C0751F202F0B0099C58F /* GameEntityCoreData+CoreDataClass.swift */,
 				3493C0761F202F0B0099C58F /* GameEntityCoreData+CoreDataProperties.swift */,
-				343045B31F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -353,13 +350,46 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		346BFE8F1F2EB8AF009F439E /* Exceptions */ = {
+		343199951F2FA74200007500 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				346BFE901F2EB8C5009F439E /* ImageCacheException.swift */,
+				343199971F2FA78A00007500 /* Entities */,
+				343199961F2FA75000007500 /* Gateways */,
+				3493C05E1F2023130099C58F /* Presenters */,
+				3493C0581F2022DD0099C58F /* Usecases */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		343199961F2FA75000007500 /* Gateways */ = {
+			isa = PBXGroup;
+			children = (
+				3493C05C1F2023060099C58F /* AllGamesGateway.swift */,
+				34D7E6331F233EA8000389CF /* CleanGamesGateway.swift */,
+				349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */,
+				3493058B1F2EA90400B2BACC /* LoadImageGateway.swift */,
+				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
+			);
+			path = Gateways;
+			sourceTree = "<group>";
+		};
+		343199971F2FA78A00007500 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				343045A71F1A92C400BE6BBF /* GameEntity.swift */,
+				343045B31F1AA29700BE6BBF /* TwitchTopGamesDecodable.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		346BFE8F1F2EB8AF009F439E /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				3493C0561F2021B70099C58F /* PopGamesError.swift */,
+				346BFE901F2EB8C5009F439E /* ImageCacheError.swift */,
 				346BFE961F2EBFE9009F439E /* LoadImageRestAPIGatewayError.swift */,
 			);
-			path = Exceptions;
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		3493C04B1F2019320099C58F /* Presenters */ = {
@@ -389,7 +419,6 @@
 				3493C0611F20275D0099C58F /* CoreDataStack.swift */,
 				34E4D3981F2142740065922D /* Future.swift */,
 				34D7E6491F236759000389CF /* NibLoadable.swift */,
-				3493C0561F2021B70099C58F /* PopGamesError.swift */,
 				3493C0531F201D3B0099C58F /* Result.swift */,
 			);
 			path = Helpers;
@@ -409,16 +438,11 @@
 			isa = PBXGroup;
 			children = (
 				3493C0631F2028B10099C58F /* AllGamesCoreDataGateway.swift */,
-				3493C05C1F2023060099C58F /* AllGamesGateway.swift */,
 				34D2EBE31F223F7A000F2131 /* AllGamesRestAPIGateway.swift */,
 				34D7E6351F233ED4000389CF /* CleanGamesCoreDataGateway.swift */,
-				34D7E6331F233EA8000389CF /* CleanGamesGateway.swift */,
 				348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */,
-				349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */,
-				3493058B1F2EA90400B2BACC /* LoadImageGateway.swift */,
 				346BFE941F2EBF69009F439E /* LoadImageRestAPIGateway.swift */,
 				34B0A3C11F2290A70092A3EE /* SaveGamesCoreDataGateway.swift */,
-				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -503,7 +527,7 @@
 		34D7E6411F2363F3000389CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				346BFE8F1F2EB8AF009F439E /* Exceptions */,
+				346BFE8F1F2EB8AF009F439E /* Errors */,
 				34D7E6421F23643B000389CF /* Views */,
 				3493C07B1F2031080099C58F /* Extensions */,
 				3493C0551F2021A40099C58F /* Helpers */,
@@ -700,7 +724,7 @@
 				3493C05D1F2023060099C58F /* AllGamesGateway.swift in Sources */,
 				3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */,
 				346BFE951F2EBF69009F439E /* LoadImageRestAPIGateway.swift in Sources */,
-				346BFE911F2EB8C5009F439E /* ImageCacheException.swift in Sources */,
+				346BFE911F2EB8C5009F439E /* ImageCacheError.swift in Sources */,
 				3493C0571F2021B70099C58F /* PopGamesError.swift in Sources */,
 				34FB86B11F20550600619193 /* SaveTopGamesUseCase.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,

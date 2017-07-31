@@ -32,7 +32,7 @@ class LoadImageUsecaseTests: XCTestCase {
 
     func testLoadImageWhenExistChacedImageAndTrhowExceptionAtCacheAccessThenJustPresentError() {
         imageCacheGateway.setupExistCacheForKey = true
-        imageCacheGateway.setupValueForKeyError = ImageCacheException.notFound
+        imageCacheGateway.setupValueForKeyError = ImageCacheError.notFound
 
         loadImageUsecase.load(id: id, url: url)
 
