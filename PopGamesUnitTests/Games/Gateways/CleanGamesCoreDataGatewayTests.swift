@@ -16,14 +16,12 @@ class CleanGamesCoreDataGatewayTests: XCTestCase {
     }
 
     func testCleanGamesWhenSuccessThenHadNoGames() {
-        var existingGames = [game]
+        var result: Result<Void>?
 
-        cleanGamesCoreDataGateway.clean().flatMap(allGamesCoreDataGateway.allGames).onResult {
-            if case Result<[Game]>.success(let requestedGames) = $0 {
-                existingGames = requestedGames
-            }
+        cleanGamesCoreDataGateway.clean().onResult {
+            result = $0
         }
 
-        XCTAssertEqual(existingGames.count, 0)
+        XCTAssertNotNil(result)
     }
 }

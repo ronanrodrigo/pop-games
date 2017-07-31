@@ -2,20 +2,22 @@ import CoreData
 
 struct SaveGamesCoreDataGateway: SaveGamesGateway {
 
-    private let managedObjectContext: NSManagedObjectContext
+    private let privateManagedObjectContext: NSManagedObjectContext
 
     init(managedObjectContext: NSManagedObjectContext) {
-        self.managedObjectContext = managedObjectContext
+        self.privateManagedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
+        privateManagedObjectContext.parent = managedObjectContext
     }
 
     func save(games: [Game]) -> Future<Void> {
+
         return Future { completion in
             let entityName = String(describing: GameEntityCoreData.self)
             for game in games {
                 var gameCoreData: GameEntityCoreData?
                 gameCoreData = NSEntityDescription.insertNewObject(
                     forEntityName: entityName,
-                    into: self.managedObjectContext) as? GameEntityCoreData
+                    into: self.privateManagedObjectContext) as? GameEntityCoreData
                 gameCoreData?.id = Int32(game.id)
                 gameCoreData?.coverUrl = game.coverUrl
                 gameCoreData?.name = game.name
@@ -28,7 +30,7 @@ struct SaveGamesCoreDataGateway: SaveGamesGateway {
 
     private func generateResult() -> Result<Void> {
         do {
-            try managedObjectContext.save()
+            try privateManagedObjectContext.save()
             return Result.success(())
         } catch {
             return Result.fail(error)
