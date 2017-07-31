@@ -22,6 +22,9 @@
 		343045BE1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */; };
 		343045C01F1AA55700BE6BBF /* JSONDecoder+Decode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */; };
 		3458D2371F214B94004A4149 /* SaveGamesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */; };
+		346BFE911F2EB8C5009F439E /* ImageCacheException.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE901F2EB8C5009F439E /* ImageCacheException.swift */; };
+		346BFE931F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 346BFE921F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift */; };
+		348E55281F2EB7140075445C /* ImageCacheDictionaryGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */; };
 		349305861F2EA0AA00B2BACC /* LoadImageUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349305851F2EA0AA00B2BACC /* LoadImageUsecase.swift */; };
 		349305881F2EA0C800B2BACC /* ImageCacheGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */; };
 		3493058A1F2EA1FB00B2BACC /* LoadImagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349305891F2EA1FB00B2BACC /* LoadImagePresenter.swift */; };
@@ -109,6 +112,9 @@
 		343045BD1F1AA4A200BE6BBF /* XCTestCase+LoadJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+LoadJson.swift"; sourceTree = "<group>"; };
 		343045BF1F1AA55700BE6BBF /* JSONDecoder+Decode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Decode.swift"; sourceTree = "<group>"; };
 		3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveGamesPresenter.swift; sourceTree = "<group>"; };
+		346BFE901F2EB8C5009F439E /* ImageCacheException.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheException.swift; sourceTree = "<group>"; };
+		346BFE921F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheDictionaryGatewayTests.swift; sourceTree = "<group>"; };
+		348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheDictionaryGateway.swift; sourceTree = "<group>"; };
 		349305851F2EA0AA00B2BACC /* LoadImageUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageUsecase.swift; sourceTree = "<group>"; };
 		349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheGateway.swift; sourceTree = "<group>"; };
 		349305891F2EA1FB00B2BACC /* LoadImagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImagePresenter.swift; sourceTree = "<group>"; };
@@ -341,6 +347,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		346BFE8F1F2EB8AF009F439E /* Exceptions */ = {
+			isa = PBXGroup;
+			children = (
+				346BFE901F2EB8C5009F439E /* ImageCacheException.swift */,
+			);
+			path = Exceptions;
+			sourceTree = "<group>";
+		};
 		3493C04B1F2019320099C58F /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
@@ -396,6 +410,7 @@
 				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
 				349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */,
 				3493058B1F2EA90400B2BACC /* LoadImageGateway.swift */,
+				348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -429,6 +444,7 @@
 				3493C07F1F2044830099C58F /* AllGamesCoreDataGatewayTests.swift */,
 				34D7E62B1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift */,
 				34D7E63B1F234DF7000389CF /* CleanGamesCoreDataGatewayTests.swift */,
+				346BFE921F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -476,6 +492,7 @@
 		34D7E6411F2363F3000389CF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				346BFE8F1F2EB8AF009F439E /* Exceptions */,
 				34D7E6421F23643B000389CF /* Views */,
 				3493C07B1F2031080099C58F /* Extensions */,
 				3493C0551F2021A40099C58F /* Helpers */,
@@ -651,6 +668,7 @@
 				349305881F2EA0C800B2BACC /* ImageCacheGateway.swift in Sources */,
 				34D7E6301F2336A9000389CF /* SaveGamesCoreDataGatewayFactory.swift in Sources */,
 				34B0A3BB1F2255EA0092A3EE /* URL+Constant.swift in Sources */,
+				348E55281F2EB7140075445C /* ImageCacheDictionaryGateway.swift in Sources */,
 				3458D2371F214B94004A4149 /* SaveGamesPresenter.swift in Sources */,
 				34B0A3BE1F228F9D0092A3EE /* AllGamesRestAPIGatewayFactory.swift in Sources */,
 				34D7E6481F23650C000389CF /* LoadingView.swift in Sources */,
@@ -664,6 +682,7 @@
 				34D7E65B1F238FB2000389CF /* ListGamesView.swift in Sources */,
 				3493C05D1F2023060099C58F /* AllGamesGateway.swift in Sources */,
 				3493C0641F2028B10099C58F /* AllGamesCoreDataGateway.swift in Sources */,
+				346BFE911F2EB8C5009F439E /* ImageCacheException.swift in Sources */,
 				3493C0571F2021B70099C58F /* PopGamesError.swift in Sources */,
 				34FB86B11F20550600619193 /* SaveTopGamesUseCase.swift in Sources */,
 				341A124D1F1718F900795FC8 /* PopGames.xcdatamodeld in Sources */,
@@ -691,6 +710,7 @@
 				34D7E63A1F23425A000389CF /* CleanGamesGatewayStub.swift in Sources */,
 				349305941F2EAD3900B2BACC /* ImageCacheGatewayStub.swift in Sources */,
 				34D7E62C1F233317000389CF /* SaveGamesCoreDataGatewayTests.swift in Sources */,
+				346BFE931F2EBAB5009F439E /* ImageCacheDictionaryGatewayTests.swift in Sources */,
 				3493C0801F2044830099C58F /* AllGamesCoreDataGatewayTests.swift in Sources */,
 				34D7E63C1F234DF7000389CF /* CleanGamesCoreDataGatewayTests.swift in Sources */,
 				3493C0821F204BA60099C58F /* NSManagedObjectContext+InMemory.swift in Sources */,
