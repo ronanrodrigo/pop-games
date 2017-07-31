@@ -12,6 +12,6 @@ I chose not to use any third-party library to expose how I see the architecture 
 `bundle exec fastlane test show_coverage:true`
 
 # Enviroment
-Xcode 9 Beta
-Swift 4
-Ruby 2.4.0
+- Xcode 9 Beta
+- Swift 4
+- Ruby 2.4.0
