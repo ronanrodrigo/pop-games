@@ -7,7 +7,6 @@ extension GameEntityCoreData {
         return NSFetchRequest<GameEntityCoreData>(entityName: "GameEntityCoreData")
     }
 
-    @NSManaged public var cover: NSData?
     @NSManaged public var coverUrl: String?
     @NSManaged public var id: Int32
     @NSManaged public var name: String?
