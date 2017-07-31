@@ -1,11 +1,3 @@
-//
-//  GameDetailViewController.swift
-//  PopGames
-//
-//  Created by Ronan R. Nunes on 31/07/17.
-//  Copyright © 2017 Ronan R. Nunes. All rights reserved.
-//
-
 import UIKit
 
 class GameDetailViewController: UIViewController {
