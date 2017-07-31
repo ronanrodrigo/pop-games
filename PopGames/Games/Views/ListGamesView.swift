@@ -5,8 +5,8 @@ class ListGamesView: NibLoadableView {
     @IBOutlet fileprivate weak var collectionView: UICollectionView!
     @IBOutlet fileprivate weak var loadingView: LoadingView!
 
-    // swiftlint:disable:next weak_delegate
-    private let collectionViewDelegate = GamesCollectionViewDelegate()
+    fileprivate var refreshControl: UIRefreshControl!
+    private let collectionViewDelegate = GamesCollectionViewDelegate() // swiftlint:disable:this weak_delegate
     private lazy var collectionViewDataSource = {
         return GamesCollectionViewDataSource(loadImageUsecase: LoadImageUsecaseFactory.make(presenter: self))
     }()
@@ -27,16 +27,24 @@ class ListGamesView: NibLoadableView {
         collectionView.register(nib, forCellWithReuseIdentifier: String.Identifier.gamesCollection)
     }
 
+    func setup(refreshControl: UIRefreshControl) {
+        self.refreshControl = refreshControl
+        collectionView.addSubview(self.refreshControl)
+    }
+
     func show(error: Error?) {
+        refreshControl.endRefreshing()
         loadingView.stopLoading()
         guard let error = error else { return }
         print(error)
     }
+
 }
 
 extension ListGamesView: ListTopGamesPresenter {
 
     func list(games: [Game]) {
+        refreshControl.endRefreshing()
         collectionViewDataSource.update(games: games)
         collectionView.reloadData()
         loadingView.stopLoading()
