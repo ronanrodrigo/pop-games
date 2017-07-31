@@ -36,9 +36,7 @@ class ListGamesViewController: UIViewController {
     }
 
     func didSelect(game: Game, cover: UIImage?) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        guard let gameDetailViewController = storyboard.instantiateViewController(
-            withIdentifier: "GameDetailViewController") as? GameDetailViewController else { return }
+        let gameDetailViewController = GameDetailViewControllerFactory.make()
         gameDetailViewController.setup(game: game, cover: cover)
         navigationController?.pushViewController(gameDetailViewController, animated: true)
     }
