@@ -20,7 +20,20 @@
                 <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Counter-Strike" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-dI-65j">
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GQT-ut-UTd">
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="3Mi-wz-QzT">
+                                <rect key="frame" x="115" y="115" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.29411764705882354" green="0.21176470588235294" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3Mi-wz-QzT" firstAttribute="centerX" secondItem="GQT-ut-UTd" secondAttribute="centerX" id="HHH-F2-Amg"/>
+                            <constraint firstItem="3Mi-wz-QzT" firstAttribute="centerY" secondItem="GQT-ut-UTd" secondAttribute="centerY" id="nRB-KG-MSC"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9n5-dI-65j">
                         <rect key="frame" x="-40" y="-106" width="330" height="462"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="9n5-dI-65j" secondAttribute="height" multiplier="0.715" id="G3f-U6-Ufg"/>
@@ -43,10 +56,14 @@
                 <constraint firstItem="n4z-Wb-9gy" firstAttribute="top" secondItem="fbk-87-4VO" secondAttribute="top" constant="8" id="2uq-0N-yyK"/>
                 <constraint firstAttribute="bottom" secondItem="n4z-Wb-9gy" secondAttribute="bottom" constant="8" id="7Ag-Pd-Saq"/>
                 <constraint firstAttribute="bottom" secondItem="fbk-87-4VO" secondAttribute="bottom" id="IHn-hg-bRv"/>
+                <constraint firstItem="GQT-ut-UTd" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="LHM-fe-ApY"/>
                 <constraint firstItem="n4z-Wb-9gy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="Mig-aE-f3h"/>
                 <constraint firstItem="9n5-dI-65j" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="P05-Hc-ABF"/>
                 <constraint firstItem="fbk-87-4VO" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pvo-8H-rcv"/>
+                <constraint firstItem="GQT-ut-UTd" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="WH1-3m-qXC"/>
                 <constraint firstItem="fbk-87-4VO" firstAttribute="height" secondItem="9n5-dI-65j" secondAttribute="height" multiplier="0.18" id="ibl-Em-HOI"/>
+                <constraint firstAttribute="bottom" secondItem="GQT-ut-UTd" secondAttribute="bottom" id="jHi-uA-Wel"/>
+                <constraint firstAttribute="trailing" secondItem="GQT-ut-UTd" secondAttribute="trailing" id="mjV-tq-vCV"/>
                 <constraint firstAttribute="trailing" secondItem="9n5-dI-65j" secondAttribute="trailing" constant="-40" id="nw9-Yd-nIj"/>
                 <constraint firstAttribute="trailing" secondItem="n4z-Wb-9gy" secondAttribute="trailing" constant="8" id="qPX-q5-10t"/>
                 <constraint firstItem="9n5-dI-65j" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-40" id="wnJ-ZL-va2"/>
@@ -62,7 +79,4 @@
             <point key="canvasLocation" x="92" y="-107"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="Counter-Strike" width="272" height="380"/>
-    </resources>
 </document>

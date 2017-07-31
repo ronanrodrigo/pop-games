@@ -4,6 +4,7 @@ import XCTest
 class TwitchDecodableTests: XCTestCase {
 
     private var topGameData: Data!
+    private let firstGameId = 21779
 
     override func setUp() {
         super.setUp()
@@ -15,6 +16,7 @@ class TwitchDecodableTests: XCTestCase {
 
         XCTAssertNotNil(twitch)
         XCTAssertEqual(twitch.top.count, 10)
+        XCTAssertEqual(twitch.top.first?.game.id, firstGameId)
     }
 
 }

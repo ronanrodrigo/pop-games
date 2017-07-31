@@ -14,7 +14,7 @@ platform :ios do
   desc 'Runs all the tests'
   lane :test do |options|
     should_open_coverage_report = options[:show_coverage] ? true : false
-    scan workspace: "#{app_name}.xcworkspace", scheme: app_name
+    scan workspace: "#{app_name}.xcworkspace", scheme: app_name, device: 'iPhone 7 Plus', clean: true
     slather_output = slather(
       proj: "#{app_name}.xcodeproj",
       workspace: "#{app_name}.xcworkspace",
@@ -49,7 +49,7 @@ platform :ios do
       api_key: 'oQScghXjjsGKKujr8-YYiJtl7xlIq8dQz0rOGIVOabl',
       event_name: 'Fastlane',
       value1: "#{app_name}",
-      value2: [lane, slather_output_test_coverage].map(&:capitalize).reject(&:empty?).join(' - '),
+      value2: [lane, slather_output_test_coverage].compact().map(&:capitalize).reject(&:empty?).join(' - '),
       value3: `whoami`
     )
   end

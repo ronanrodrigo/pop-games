@@ -7,6 +7,8 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
     private let gameName = "Counter Strike"
     private let gamePopularity = 10
     private let gameViewers = 20
+    private let gameCoverUrl = "http://www.com.br"
+    private let gameId = 666
     private var gateway: AllGamesCoreDataGateway!
     private var context: NSManagedObjectContext!
 
@@ -14,7 +16,8 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
         super.setUp()
         context = NSManagedObjectContext.inMemory()
         gateway = AllGamesCoreDataGateway(managedObjectContext: context)
-        let game = GameEntity(name: gameName, popularity: gamePopularity, viewers: gameViewers)
+        let game = GameEntity(id: gameId, coverUrl: gameCoverUrl, name: gameName, popularity: gamePopularity,
+                              viewers: gameViewers)
         _ = SaveGamesCoreDataGateway(managedObjectContext: context).save(games: [game])
     }
 
@@ -26,7 +29,8 @@ class AllGamesCoreDataGatewayTests: XCTestCase {
         }}
 
         XCTAssertEqual(games.count, 1)
-        XCTAssertEqual(games[0].name, gameName)
+        XCTAssertEqual(games[0].id, gameId)
+        XCTAssertEqual(games[0].coverUrl, gameCoverUrl)
         XCTAssertEqual(games[0].popularity, gamePopularity)
         XCTAssertEqual(games[0].viewers, gameViewers)
     }

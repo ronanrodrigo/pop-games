@@ -36,7 +36,8 @@ struct AllGamesRestAPIGateway: AllGamesGateway {
 
     private func generateGameEntity(twitchTopGames: TwitchTopGamesDecodable) -> [Game] {
         let games = twitchTopGames.top.map { topGame -> Game in
-            return GameEntity(name: topGame.game.name, popularity: topGame.game.popularity, viewers: topGame.viewers)
+            return GameEntity(id: topGame.game.id, coverUrl: topGame.game.box.large, name: topGame.game.name,
+                              popularity: topGame.game.popularity, viewers: topGame.viewers)
         }
         return games
     }
