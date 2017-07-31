@@ -392,8 +392,8 @@
 			isa = PBXGroup;
 			children = (
 				3493C0591F2022E70099C58F /* ListTopGamesUseCase.swift */,
-				34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */,
 				349305851F2EA0AA00B2BACC /* LoadImageUsecase.swift */,
+				34FB86B01F20550600619193 /* SaveTopGamesUseCase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -406,11 +406,11 @@
 				34D2EBE31F223F7A000F2131 /* AllGamesRestAPIGateway.swift */,
 				34D7E6351F233ED4000389CF /* CleanGamesCoreDataGateway.swift */,
 				34D7E6331F233EA8000389CF /* CleanGamesGateway.swift */,
-				34B0A3C11F2290A70092A3EE /* SaveGamesCoreDataGateway.swift */,
-				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
+				348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */,
 				349305871F2EA0C800B2BACC /* ImageCacheGateway.swift */,
 				3493058B1F2EA90400B2BACC /* LoadImageGateway.swift */,
-				348E55271F2EB7140075445C /* ImageCacheDictionaryGateway.swift */,
+				34B0A3C11F2290A70092A3EE /* SaveGamesCoreDataGateway.swift */,
+				34FB86B21F20552A00619193 /* SaveGamesGateway.swift */,
 			);
 			path = Gateways;
 			sourceTree = "<group>";
@@ -419,8 +419,8 @@
 			isa = PBXGroup;
 			children = (
 				3493C05F1F20231E0099C58F /* ListTopGamesPresenter.swift */,
-				3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */,
 				349305891F2EA1FB00B2BACC /* LoadImagePresenter.swift */,
+				3458D2361F214B94004A4149 /* SaveGamesPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
