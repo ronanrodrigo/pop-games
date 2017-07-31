@@ -12,16 +12,21 @@ struct SaveGamesCoreDataGateway: SaveGamesGateway {
         return Future { completion in
             let entityName = String(describing: GameEntityCoreData.self)
             for game in games {
-                let gameCoreData = NSEntityDescription.insertNewObject(
-                    forEntityName: entityName,
-                    into: managedObjectContext) as? GameEntityCoreData
-                gameCoreData?.id = Int32(game.id)
-                gameCoreData?.coverUrl = game.coverUrl
-                gameCoreData?.name = game.name
-                gameCoreData?.popularity = Int32(game.popularity)
-                gameCoreData?.viewers = Int32(game.viewers)
+                var gameCoreData: GameEntityCoreData?
+                DispatchQueue.main.async {
+                    gameCoreData = NSEntityDescription.insertNewObject(
+                        forEntityName: entityName,
+                        into: self.managedObjectContext) as? GameEntityCoreData
+                    gameCoreData?.id = Int32(game.id)
+                    gameCoreData?.coverUrl = game.coverUrl
+                    gameCoreData?.name = game.name
+                    gameCoreData?.popularity = Int32(game.popularity)
+                    gameCoreData?.viewers = Int32(game.viewers)
+                }
             }
-            completion(generateResult())
+            DispatchQueue.main.async {
+                completion(self.generateResult())
+            }
         }
     }
 

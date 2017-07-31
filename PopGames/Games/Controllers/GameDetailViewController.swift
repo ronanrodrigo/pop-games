@@ -24,4 +24,9 @@ class GameDetailViewController: UIViewController {
         self.cover = cover
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = game.name
+    }
+
 }

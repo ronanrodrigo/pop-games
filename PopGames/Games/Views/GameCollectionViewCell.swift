@@ -26,7 +26,7 @@ class GameCollectionViewCell: UICollectionViewCell {
     }
 
     func setup(name: String) {
-        nameLabel.text = name
+        nameLabel.text = name.uppercased()
     }
 
     func setup(cover: UIImage?) {

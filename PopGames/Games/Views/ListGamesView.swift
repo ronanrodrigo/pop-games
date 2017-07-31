@@ -2,48 +2,34 @@ import UIKit
 
 class ListGamesView: NibLoadableView {
 
-    @IBOutlet fileprivate weak var collectionView: UICollectionView!
-    @IBOutlet fileprivate weak var loadingView: LoadingView!
+    @IBOutlet private weak var loadingView: LoadingView!
+    @IBOutlet private weak var collectionView: UICollectionView! {
+        didSet {
+            let nib = UINib(nibName: String(describing: GameCollectionViewCell.self), bundle: nil)
+            collectionView.register(nib, forCellWithReuseIdentifier: String.Identifier.gamesCollection)
+        }
+    }
 
-    fileprivate var refreshControl: UIRefreshControl!
-    private var collectionViewDelegate = GamesCollectionViewDelegate() // swiftlint:disable:this weak_delegate
-    private lazy var collectionViewDataSource = {
-        return GamesCollectionViewDataSource(loadImageUsecase: LoadImageUsecaseFactory.make(presenter: self))
-    }()
+    private var camesCollectionViewDataProvider: GamesCollectionViewDataProvider! {
+        didSet {
+            collectionView.dataSource = camesCollectionViewDataProvider
+            collectionView.delegate = camesCollectionViewDataProvider
+        }
+    }
 
     var listTopGamesPresenter: ListTopGamesPresenter { return self }
     var saveGamesPresenter: SaveGamesPresenter { return self }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupCollectionView()
-    }
-
-    private func setupCollectionView() {
-        collectionView.dataSource = collectionViewDataSource
-        collectionView.delegate = collectionViewDelegate
-
-        let nib = UINib(nibName: String(describing: GameCollectionViewCell.self), bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: String.Identifier.gamesCollection)
-    }
-
-    func setup(didSelectGame: DidSelectGame) {
-        collectionViewDelegate.didSelectGame = didSelectGame
-    }
-
-    func gameAt(row: Int) -> (game: Game, cover: UIImage?) {
-        let game = collectionViewDataSource.game(atRow: row)
-        let cover = collectionViewDataSource.gameCover(byId: game.id)
-        return (game, cover)
-    }
+    var loadImagePresenter: LoadImagePresenter { return self }
 
     func setup(refreshControl: UIRefreshControl) {
-        self.refreshControl = refreshControl
-        collectionView.addSubview(self.refreshControl)
+        collectionView.addSubview(refreshControl)
+    }
+
+    func setup(camesCollectionViewDataProvider: GamesCollectionViewDataProvider) {
+        self.camesCollectionViewDataProvider = camesCollectionViewDataProvider
     }
 
     func show(error: Error?) {
-        refreshControl.endRefreshing()
         loadingView.stopLoading()
         guard let error = error else { return }
         print(error)
@@ -54,8 +40,7 @@ class ListGamesView: NibLoadableView {
 extension ListGamesView: ListTopGamesPresenter {
 
     func list(games: [Game]) {
-        refreshControl.endRefreshing()
-        collectionViewDataSource.update(games: games)
+        camesCollectionViewDataProvider.update(with: games)
         collectionView.reloadData()
         loadingView.stopLoading()
     }
@@ -74,9 +59,9 @@ extension ListGamesView: LoadImagePresenter {
 
     func show(data: Data, forId id: Int) {
         let image = UIImage(data: data)
-        collectionViewDataSource.updateGameCover(withId: id, image: image)
+        camesCollectionViewDataProvider.updateGameCover(id: id, image: image)
 
-        if let row = self.collectionViewDataSource.index(ofId: id) {
+        if let row = camesCollectionViewDataProvider.row(ofId: id) {
             let intedPathToUpdate = IndexPath(row: row, section: 0)
             DispatchQueue.main.async { [unowned self] in
                 self.collectionView.reloadItems(at: [intedPathToUpdate])
