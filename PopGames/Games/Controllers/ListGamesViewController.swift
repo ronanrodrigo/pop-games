@@ -35,7 +35,7 @@ class ListGamesViewController: UIViewController {
         refreshControl.endRefreshing()
     }
 
-    func didSelect(game: Game, cover: UIImage?) {
+    private func didSelect(game: Game, cover: UIImage?) {
         let gameDetailViewController = GameDetailViewControllerFactory.make()
         gameDetailViewController.setup(game: game, cover: cover)
         navigationController?.pushViewController(gameDetailViewController, animated: true)
