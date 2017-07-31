@@ -20,13 +20,13 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
                                                       for: indexPath)
 
         if let gameCell = cell as? GameCollectionViewCell {
-            let game = games[indexPath.row]
-            if hasCover(forId: game.id) {
-                gameCell.setup(cover: gameCover(byId: game.id))
+            let gameAtRow = game(atRow: indexPath.row)
+            if hasCover(forId: gameAtRow.id) {
+                gameCell.setup(cover: gameCover(byId: gameAtRow.id))
             } else {
-                loadImageUsecase.load(id: game.id, url: game.coverUrl)
+                loadImageUsecase.load(id: gameAtRow.id, url: gameAtRow.coverUrl)
             }
-            gameCell.setup(name: game.name)
+            gameCell.setup(name: gameAtRow.name)
         }
 
         return cell
@@ -44,15 +44,19 @@ class GamesCollectionViewDataSource: NSObject, UICollectionViewDataSource {
         return games.index { $0.id == id }
     }
 
-    private func hasCover(forId id: Int) -> Bool {
-        return gamesCovers.keys.contains(id)
+    func game(atRow row: Int) -> Game {
+        return games[row]
     }
 
-    private func gameCover(byId id: Int) -> UIImage? {
+    func gameCover(byId id: Int) -> UIImage? {
         if let cover = gamesCovers[id] {
             return cover
         }
         return nil
+    }
+
+    private func hasCover(forId id: Int) -> Bool {
+        return gamesCovers.keys.contains(id)
     }
 
 }

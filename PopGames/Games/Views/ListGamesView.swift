@@ -6,7 +6,7 @@ class ListGamesView: NibLoadableView {
     @IBOutlet fileprivate weak var loadingView: LoadingView!
 
     fileprivate var refreshControl: UIRefreshControl!
-    private let collectionViewDelegate = GamesCollectionViewDelegate() // swiftlint:disable:this weak_delegate
+    private var collectionViewDelegate = GamesCollectionViewDelegate() // swiftlint:disable:this weak_delegate
     private lazy var collectionViewDataSource = {
         return GamesCollectionViewDataSource(loadImageUsecase: LoadImageUsecaseFactory.make(presenter: self))
     }()
@@ -25,6 +25,16 @@ class ListGamesView: NibLoadableView {
 
         let nib = UINib(nibName: String(describing: GameCollectionViewCell.self), bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: String.Identifier.gamesCollection)
+    }
+
+    func setup(didSelectGame: DidSelectGame) {
+        collectionViewDelegate.didSelectGame = didSelectGame
+    }
+
+    func gameAt(row: Int) -> (game: Game, cover: UIImage?) {
+        let game = collectionViewDataSource.game(atRow: row)
+        let cover = collectionViewDataSource.gameCover(byId: game.id)
+        return (game, cover)
     }
 
     func setup(refreshControl: UIRefreshControl) {
