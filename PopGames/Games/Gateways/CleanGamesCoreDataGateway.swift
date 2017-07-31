@@ -2,11 +2,10 @@ import CoreData
 
 struct CleanGamesCoreDataGateway: CleanGamesGateway {
 
-    private let privateManagedObjectContext: NSManagedObjectContext
+    private let managedObjectContext: NSManagedObjectContext
 
     init(managedObjectContext: NSManagedObjectContext) {
-        self.privateManagedObjectContext = NSManagedObjectContext(concurrencyType: .privateQueueConcurrencyType)
-        privateManagedObjectContext.parent = managedObjectContext
+        self.managedObjectContext = managedObjectContext
     }
 
     func clean() -> Future<Void> {
@@ -16,7 +15,7 @@ struct CleanGamesCoreDataGateway: CleanGamesGateway {
             let delete = NSBatchDeleteRequest(fetchRequest: fetchGames)
 
             do {
-                try privateManagedObjectContext.execute(delete)
+                try managedObjectContext.execute(delete)
                 completion(Result.success(()))
             } catch {
                 completion(Result.fail(error))
