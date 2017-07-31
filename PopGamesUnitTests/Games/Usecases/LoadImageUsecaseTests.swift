@@ -30,6 +30,15 @@ class LoadImageUsecaseTests: XCTestCase {
         XCTAssertTrue(loadImagePresenter.didCallShowStub)
     }
 
+    func testLoadImageWhenExistChacedImageAndTrhowExceptionAtCacheAccessThenJustPresentError() {
+        imageCacheGateway.setupExistCacheForKey = true
+        imageCacheGateway.setupValueForKeyError = ImageCacheException.notFound
+
+        loadImageUsecase.load(id: id, url: url)
+
+        XCTAssertTrue(loadImagePresenter.didShowErrorStub)
+    }
+
     func testLoadImageWhenDoesNotExistCachedImageThenCacheImage() {
         imageCacheGateway.setupExistCacheForKey = false
         imageCacheGateway.setupValueForKey = Data()

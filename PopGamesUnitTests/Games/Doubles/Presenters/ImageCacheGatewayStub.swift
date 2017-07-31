@@ -5,6 +5,7 @@ class ImageCacheGatewayStub: ImageCacheGateway {
 
     var setupExistCacheForKey: Bool!
     var setupValueForKey: Data!
+    var setupValueForKeyError: Error?
 
     var didCallCacheKeyValue = false
     var didCallExistCacheForKey = false
@@ -19,9 +20,9 @@ class ImageCacheGatewayStub: ImageCacheGateway {
         return setupExistCacheForKey
     }
 
-    func value(forKey: Int) -> Data {
+    func value(forKey key: Int) throws -> Data {
         valueForKeyStub = true
+        if let error = setupValueForKeyError { throw error }
         return setupValueForKey
     }
-
 }

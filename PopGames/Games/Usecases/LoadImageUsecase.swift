@@ -15,8 +15,12 @@ struct LoadImageUsecase {
 
     func load(id: Int, url: String) {
         if imageCacheGateway.existCache(forKey: id) {
-            let data = imageCacheGateway.value(forKey: id)
-            loadImagePresenter.show(data: data, forId: id)
+            do {
+                let data = try imageCacheGateway.value(forKey: id)
+                loadImagePresenter.show(data: data, forId: id)
+            } catch {
+                loadImagePresenter.show(error: error)
+            }
         } else {
             loadImageGateway.load(url: url).onResult({ result in
                 switch result {
